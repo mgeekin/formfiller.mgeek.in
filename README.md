@@ -16,3 +16,9 @@ Just load your data filled excel and formhelper and it will convert your data in
 ![First](./assets/img/1.png)
 
 ![First](./assets/img/2.png)
+
+
+
+# Download
+
+<button src='/assets/release/FormHelperBetaRelease.zip'>Beta Release</button>
