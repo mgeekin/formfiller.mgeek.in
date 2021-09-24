@@ -1,9 +1,8 @@
 ---
 layout: forward
 target: https://www.researchgate.net/profile/Prateek-Raj-Gautam
-targetname: Research Profile
-targettitle: https://www.researchgate.net/profile/Prateek-Raj-Gautam
+targetname: ResearchGate.com Profile
+targettitle: ResearchGate Profile
 time: 10
-message: Under Construction
-​---
-
+message: This isn't here any more!
+---
