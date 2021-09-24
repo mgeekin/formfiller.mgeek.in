@@ -2,6 +2,12 @@
 
 
 
+# Download
+
+<button src='/assets/release/FormHelperBetaRelease.zip'>Beta Release</button>
+
+# Instructions
+
 Just load your data filled excel and formhelper and it will convert your data in to buttons. These buttons will type data in form for you. Different sheets can be selected from the botom.
 
 #### Steps 
@@ -19,6 +25,3 @@ Just load your data filled excel and formhelper and it will convert your data in
 
 
 
-# Download
-
-<button src='/assets/release/FormHelperBetaRelease.zip'>Beta Release</button>
