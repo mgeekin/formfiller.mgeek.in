@@ -8,7 +8,7 @@
 # Download
 
 <!-- Auto width -->
-<a href="./assets/release/FormHelperBetaRelease.zip" download="GFG"><button class="btn"><i class="fa fa-download"></i> Beta Release</button></a>
+<a href="./assets/release/FormHelperBetaRelease.zip" download="FormHelperBetaRelease.zip"><button class="btn"><i class="fa fa-download"></i> Beta Release</button></a>
 
 
 
