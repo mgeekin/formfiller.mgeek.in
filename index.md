@@ -1,10 +1,18 @@
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 # FormHelper.mgeek.in
 
 
 
 # Download
 
-<button src='/assets/release/FormHelperBetaRelease.zip'>Beta Release</button>
+<!-- Auto width -->
+<a href="./assets/release/FormHelperBetaRelease.zip" download="GFG"><button class="btn"><i class="fa fa-download"></i> Beta Release</button></a>
+
+
+
+
 
 # Instructions
 
