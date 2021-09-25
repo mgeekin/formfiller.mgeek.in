@@ -8,7 +8,7 @@
 # Download
 
 <!-- Auto width -->
-<a href="././assets/release/FormHelper_v1.100.zip" download="FormHelper_v1.100.zip"><button class="btn"><i class="fa fa-download"></i>FormHelper_v1.100</button></a>
+<a href="././assets/release/Release.zip" download="FormHelper_v1.102.zip"><button class="btn"><i class="fa fa-download"></i>FormHelper_v1.100</button></a>
 
 <p> zip file contains Demo files you can edit with your data</p>
 
