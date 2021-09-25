@@ -29,9 +29,15 @@ Just load your data filled excel and formhelper and it will convert your data in
 
 ## Screenshots
 
-![First](./assets/img/1.png)
+![](./assets/img/screenshots/01.png)
 
-![First](./assets/img/2.png)
+![](./assets/img/screenshots/02.png)
 
+![](./assets/img/screenshots/03.png)
 
+![](./assets/img/screenshots/04.png)
+
+![](./assets/img/screenshots/05.png)
+
+![](./assets/img/screenshots/06.png)
 
