@@ -41,3 +41,11 @@ Just load your data filled excel and formhelper and it will convert your data in
 
 ![](././assets/img/screenshots/06.png)
 
+
+#### Follow telegram channel [Form Helper](https://t.me/FreeFormHelper)
+
+[t.me/FreeFormHelper](https://t.me/FreeFormHelper)
+
+#### Rating  
+
+<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-post="FreeFormHelper/4" data-width="100%"></script>
