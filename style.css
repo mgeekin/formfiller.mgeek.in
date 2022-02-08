@@ -127,8 +127,8 @@ img{
 }
 
 img:hover{
-    width:100%;
+    width:80%;
     position:absolute;
-    left:0px;
-    right:100%;
+    left:10%;
+    right:90%;
 }
