@@ -5,8 +5,8 @@ t1 = window.setTimeout(function () {
     //window.location.href = redirectUrl;
 }, 10000);
 
-var releaseUrl = "";
-var youtubeCode = "/assets/release/Release.zip";
+var releaseUrl = "/assets/release/Release.zip";
+var youtubeCode = "";
 
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
