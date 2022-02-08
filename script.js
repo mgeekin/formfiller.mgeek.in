@@ -6,7 +6,7 @@ t1 = window.setTimeout(function () {
 }, 10000);
 
 var releaseUrl = "";
-var youtubeCode = "";
+var youtubeCode = "/assets/release/Release.zip";
 
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
@@ -112,7 +112,7 @@ screenshotURL = [
     "https://formhelper.mgeek.in/assets/img/screenshots/05.png"
 ]
 for (i = 0; i < screenshotURL.length; i++) {
-    screenshotScroll.append(gen("img", `screenimg${i}`, `${screenshotURL[i]}`, 'screehshotimg'));
+    screenshotScroll.append(gen("div", "", gen("img", `screenimg${i}`, `${screenshotURL[i]}`, 'screehshotimg'), "screenshotdiv"));
     document.getElementById(`screenimg${i}`).src = `${screenshotURL[i]}`;
 }
 //addButton("TEMP", main);

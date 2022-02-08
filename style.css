@@ -68,6 +68,7 @@ app{
     font-size: small;
 
     box-shadow: 1px 1px 1px rgb(21, 164, 247);
+    text-transform: capitalize;
 }
 .typebutton:hover{
     box-shadow: 2px 2px 3px rgb(21, 164, 247);
@@ -104,8 +105,30 @@ div:last-of-type{
     margin-bottom:100px;
 }
 
-.screehshotimg{
+
+#screenshotScroll{
+    display: flex;
+    width:90%;
+    overflow: hidden;
+}
+
+.screenshotdiv{
+    width:100%;
+}
+
+.screenshotimg{
     border-radius: 5px;;
     margin:5px;
     box-shadow: 2px 2px 2px white;
+}
+
+img{
+    width:100%;
+}
+
+img:hover{
+    width:100%;
+    position:absolute;
+    left:0px;
+    right:100%;
 }
