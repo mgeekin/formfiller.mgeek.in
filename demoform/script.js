@@ -41,11 +41,15 @@ body.append(main);
 var formfields = [
     {
         "heading": "Basic",
-        "data": ['Full name', 'First name', 'Middle name', "Last name",]
+        "data": ['First name', 'Middle name', "Last name", 'Full name']
+    },
+    {
+        "heading": "Contact",
+        "data": ['Country code', 'Mobile', 'Email', "Address"]
     },
     {
         "heading": "Education",
-        "data": ['degee', 'college', 'year', "percentage",]
+        "data": ['degee', 'college', 'year']
     },
     {
         "heading": "Experience",
@@ -73,7 +77,7 @@ for (var i = 0; i < formfields.length; i++) {
     console.log(datafield)
     main.append(gen("div", `div${heading}`));
 
-    document.getElementById(`div${heading}`).append(gen("h1", `heading${i}`, `${heading}`));
+    document.getElementById(`div${heading}`).append(gen("h3", `heading${i}`, `${heading}`));
     document.getElementById(`div${heading}`).append(gen("table", `table${i}`));
     for (var j = 0; j < datafield.length; j++) {
         var dataentry = datafield[j];
