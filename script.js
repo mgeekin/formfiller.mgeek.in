@@ -74,7 +74,7 @@ function gennew(elementtype, idin, htmlin, classin) {
 const body = document.querySelector("app");
 const header = gen("div", "header");
 header.append(gen("h1", "appTitle", "Form Helper"));
-header.append(gen("h4", "subTitle", "A simple excel to automation tool for form filling and data entry"));
+header.append(gen("h4", "subTitle", "A simple excel automation tool for form filling and data entry"));
 const main = gen("div", "main");
 const footer = gen("div", "footer", `<i>by Dr. Prateek Raj Gautam</i>`);
 
