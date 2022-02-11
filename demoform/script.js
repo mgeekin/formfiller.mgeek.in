@@ -52,21 +52,17 @@ var formfields = [
         "data": ['degee', 'college', 'year']
     },
     {
-        "heading": "Experience",
-        "data": ['Designation', 'Institution', 'Start year', "End year",]
-    },
-    {
         "heading": "Publication 1",
-        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors", "Number of authors"]
+        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors"]
     },
     {
         "heading": "Publication 2",
-        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors", "Number of authors"]
+        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors"]
     },
 
     {
         "heading": "Publication 3",
-        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors", "Number of authors"]
+        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors"]
     }
 ];
 

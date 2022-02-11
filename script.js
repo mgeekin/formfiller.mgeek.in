@@ -83,7 +83,20 @@ body.append(header);
 body.append(main);
 //body.append(footer);
 
-
+var og = [
+    ['title', 'Faster way to fill online forms with excel'],
+    ['description', ''],
+    ['type', 'website'],
+    ['image', '/assets/img/webpreview.png']
+];
+head = document.querySelector("head");
+for (i = 0; i < og.length; i++) {
+    var metaid = `metaid${og[i][0]}`;
+    console.log(metaid)
+    head.append(gen("meta", `${metaid}`));
+    document.getElementById(`${metaid}`).name = `op:${og[i][0]}`;
+    document.getElementById(`${metaid}`).content = `${og[i][1]}`;
+}
 //youtube
 main.append(gen("div", "yt", gen("h2", "", "Video Tutorial on YouTube")))
 yt.append(gen("ytcode", "ytcode"));
