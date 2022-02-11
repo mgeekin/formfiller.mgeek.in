@@ -53,16 +53,16 @@ var formfields = [
     },
     {
         "heading": "Publication 1",
-        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors"]
+        "data": ['Title', 'Journal', "Authors", "Year", "pages"]
     },
     {
         "heading": "Publication 2",
-        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors"]
+        "data": ['Title', 'Journal', "Authors", "Year", "pages"]
     },
 
     {
         "heading": "Publication 3",
-        "data": ['Title', 'Journal', 'ISSN', "Year", "Authors"]
+        "data": ['Title', 'Journal', "Authors", "Year", "pages"]
     }
 ];
 
