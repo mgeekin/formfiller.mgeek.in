@@ -6,7 +6,7 @@ t1 = window.setTimeout(function () {
 }, 10000);
 
 var releaseUrl = "/assets/release/Release.zip";
-var youtubeCode = "";
+var youtubeCode = '<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/AU6rH9O8WfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
