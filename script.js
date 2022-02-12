@@ -9,7 +9,7 @@ var releaseUrl = "/assets/release/Release.zip";
 var ytIdentifier = 'AU6rH9O8WfA'
 var youtubeCode = `<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/${ytIdentifier}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 //var youtubeComments = `<div class="ytContainer"><iframe class="ytVideo" src="http://gdata.youtube.com/feeds/api/videos/${ytIdentifier}/comments"></iframe></div>`
-var gifSrc = '/assets/img/preview.gif';
+var gifSrc = '/assets/img/preview.webm';
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
     if (idin != undefined && idin != "") {
@@ -89,7 +89,7 @@ var og = [
     ['title', 'Automation tool for filling forms and data entry'],
     ['description', 'It provides a way to fill forms in less time.    1. Open your form where data needs to be filled'],
     ['type', 'website'],
-    ['image', '/assets/img/preview.png']
+    ['image', '/assets/img/preview.webp']
 ];
 head = document.querySelector("head");
 for (i = 0; i < og.length; i++) {
@@ -124,11 +124,12 @@ gif.src = gifSrc;
 //IMG
 screenshots.append(gen("div", "screenshotScroll"));
 screenshotURL = [
-    "https://formhelper.mgeek.in/assets/img/screenshots/01.png",
-    "https://formhelper.mgeek.in/assets/img/screenshots/02.png",
-    "https://formhelper.mgeek.in/assets/img/screenshots/03.png",
-    "https://formhelper.mgeek.in/assets/img/screenshots/04.png",
-    "https://formhelper.mgeek.in/assets/img/screenshots/05.png"
+    "https://formhelper.mgeek.in/assets/img/screenshots/01.webp",
+    "https://formhelper.mgeek.in/assets/img/screenshots/02.webp",
+    "https://formhelper.mgeek.in/assets/img/screenshots/03.webp",
+    "https://formhelper.mgeek.in/assets/img/screenshots/04.webp",
+    "https://formhelper.mgeek.in/assets/img/screenshots/05.webp",
+    "https://formhelper.mgeek.in/assets/img/screenshots/06.webp"
 ]
 for (i = 0; i < screenshotURL.length; i++) {
     screenshotScroll.append(gen("div", "", gen("img", `screenimg${i}`, `${screenshotURL[i]}`, 'screehshotimg'), "screenshotdiv"));
