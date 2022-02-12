@@ -87,7 +87,7 @@ body.append(main);
 
 var og = [
     ['title', 'Automation tool for filling forms and data entry'],
-    ['description', ''],
+    ['description', 'It provides a way to fill forms in less time.    1. Open your form where data needs to be filled'],
     ['type', 'website'],
     ['image', '/assets/img/preview.png']
 ];
@@ -96,7 +96,8 @@ for (i = 0; i < og.length; i++) {
     var metaid = `metaid${og[i][0]}`;
     console.log(metaid)
     head.append(gen("meta", `${metaid}`));
-    document.getElementById(`${metaid}`).name = `op:${og[i][0]}`;
+    document.getElementById(`${metaid}`).name = `og:${og[i][0]}`;
+    document.getElementById(`${metaid}`).property = `og:${og[i][0]}`;
     document.getElementById(`${metaid}`).content = `${og[i][1]}`;
 }
 
