@@ -122,6 +122,11 @@ div:last-of-type{
 
 .screehshotgif{
     width:100%;
+    margin:10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px white;
+    margin-bottom:10%;
+
 }
 
 .screehshotimg{
