@@ -6,7 +6,9 @@ t1 = window.setTimeout(function () {
 }, 10000);
 
 var releaseUrl = "/assets/release/Release.zip";
-var youtubeCode = '<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/AU6rH9O8WfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+var ytIdentifier = 'AU6rH9O8WfA'
+var youtubeCode = `<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/${ytIdentifier}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+//var youtubeComments = `<div class="ytContainer"><iframe class="ytVideo" src="http://gdata.youtube.com/feeds/api/videos/${ytIdentifier}/comments"></iframe></div>`
 var gifSrc = '/assets/img/preview.gif';
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
@@ -149,6 +151,8 @@ download.append(gen("p", "", "zip file contains Demo files you can edit with you
 main.append(gen("div", "yt", gen("h2", "", "Video Tutorial on YouTube"), "section"))
 yt.append(gen("ytcode", "ytcode"));
 ytcode.innerHTML = youtubeCode;
+//yt.append(gen("ytcode", "ytcomment"));
+//ytcomment.innerHTML = youtubeComments;
 
 
 

@@ -9,9 +9,9 @@
    viewBox="0 0 1366 768"
    sodipodi:docname="preview.svg"
    inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
-   inkscape:export-filename="/home/prateek/Desktop/formfiller.mgeek.in/assets/img/preview.png"
-   inkscape:export-xdpi="150"
-   inkscape:export-ydpi="150"
+   inkscape:export-filename="/home/prateek/Desktop/formHelper/website/formhelper.mgeek.in/assets/img/preview.png"
+   inkscape:export-xdpi="80"
+   inkscape:export-ydpi="80"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -192,7 +192,8 @@
        id="g77430"
        inkscape:export-filename="/home/prateek/Desktop/formfiller.mgeek.in/assets/img/preview.png"
        inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
+       inkscape:export-ydpi="150"
+       transform="matrix(0.66666667,0,0,0.66666667,944.15558,-155.20911)">
       <image
          width="1366"
          height="768"
