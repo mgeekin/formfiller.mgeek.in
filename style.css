@@ -59,18 +59,17 @@ app{
 
 .button,.typebutton{
     display:inline-block;
-    border-radius: 5px;
-    padding:5px;
+    border-radius: 10px;
+    padding:8px;
     color:rgb(255, 255, 255);
     background:linear-gradient(0deg,hsl(240, 33%, 16%) 80%,hsl(239, 25%, 49%) 100%) ;
     text-align: center;
-    margin:2px;
-    font-size: small;
+    margin:5px;
 
     box-shadow: 1px 1px 1px rgb(21, 164, 247);
     text-transform: capitalize;
 }
-.typebutton:hover{
+.button:hover,.typebutton:hover{
     box-shadow: 2px 2px 3px rgb(21, 164, 247);
 
     
@@ -108,8 +107,7 @@ div:last-of-type{
 
 #screenshotScroll{
     display: flex;
-    width:90%;
-    overflow: hidden;
+    width:100%;
 }
 
 .screenshotdiv{
@@ -122,16 +120,31 @@ div:last-of-type{
     box-shadow: 2px 2px 2px white;
 }
 
-img{
+.screehshotgif{
     width:100%;
 }
 
-img:hover{
-    width:80%;
-    position:absolute;
-    left:10%;
-    right:90%;
+.screehshotimg{
+    width:100%;
+    padding:10px;
+    position:relative;
+    transition: width .5s ease-in-out .5s;
+    transition: position .5s ease-in-out .5s;
+
+    
 }
+
+.screehshotimg:hover{
+    width:80%;
+    left:5%;
+    right:5%;
+    padding:5%;
+    padding-left:10%;
+    padding-right: 10%;
+    z-index: 2;
+    position:absolute;
+}
+
 
 .ytContainer {
     position: relative;
@@ -146,4 +159,9 @@ img:hover{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.section{
+    margin-top:10px;
+    margin-bottom:50px;
 }
