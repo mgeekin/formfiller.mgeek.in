@@ -9,7 +9,13 @@ var releaseUrl = "/assets/release/Release.zip";
 var ytIdentifier = 'AU6rH9O8WfA'
 var youtubeCode = `<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/${ytIdentifier}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 //var youtubeComments = `<div class="ytContainer"><iframe class="ytVideo" src="http://gdata.youtube.com/feeds/api/videos/${ytIdentifier}/comments"></iframe></div>`
-var gifSrc = '/assets/img/preview.webm';
+var gifSrc = '/assets/img/preview.gif';
+var webmSrc = '/assets/img/preview.webm';
+var webMvideoElement = `<video autoplay loop muted playsinline>
+<source src="${webmSrc}" type="video/webm">
+</video>`;
+
+
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
     if (idin != undefined && idin != "") {
@@ -117,10 +123,15 @@ for (i = 0; i < list.length; i++) {
 //screenshot
 main.append(gen("div", "screenshots", gen("h2", "", "Screenshots"), "section"))
 //GIF
+
+
 screenshots.append(gen("div", "screenshotGif"));
-screenshotGif.append(gen("img", "gif", "", 'screehshotgif'));
-gif.alt = "";
-gif.src = gifSrc;
+screenshotGif.innerHTML = webMvideoElement;
+//gif.alt = "";
+//gif.type = "video/webm";
+//gif.src = gifSrc;
+
+
 //IMG
 screenshots.append(gen("div", "screenshotScroll"));
 screenshotURL = [
