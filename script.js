@@ -117,6 +117,7 @@ main.append(gen("div", "screenshots", gen("h2", "", "Screenshots"), "section"))
 screenshots.append(gen("div", "screenshotGif"));
 screenshotGif.append(gen("img", "gif", "", 'screehshotgif'));
 gif.alt = "";
+gif.src = gifSrc;
 //IMG
 screenshots.append(gen("div", "screenshotScroll"));
 screenshotURL = [
