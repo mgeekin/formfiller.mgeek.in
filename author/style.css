@@ -6,7 +6,8 @@
 }
 body,li,ul,a{
     text-decoration: none;
-    list-style: none;   
+    list-style: none;  
+    font-size: large; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding:0;
     margin:0;
@@ -101,4 +102,18 @@ app{
 
 div:last-of-type{
     margin-bottom:100px;
+}
+
+
+#chat{
+    background: hsla(125, 100%, 70%, 0);
+}
+
+
+.p1 {
+    background: hsla(0, 0%, 100%, 0.178);
+    padding: 10px 40px;
+    box-shadow: rgb(212, 212, 238) 2px 2px 2px;
+    border-radius: 30px;
+    max-width: 80%;
 }

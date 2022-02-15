@@ -1,9 +1,9 @@
-
+/* 
 t1 = window.setTimeout(function () {
     var redirectUrl = "https://www.researchgate.net/profile/Prateek-Raj-Gautam";
     //var redirectUrl = "https://formhelper.mgeek.in";
     window.location.href = redirectUrl;
-}, 10000);
+}, 10000); */
 
 
 function gen(elementtype, idin, htmlin, classin) {
@@ -91,3 +91,50 @@ function addButton(text, target) {
     target.append(button);
 
 }
+
+
+var elementsType = ["p", "div", "span", "img"];
+for (i = 0; i < elementsType.length; i++) {
+    console.log(`${elementsType[i]}`)
+    // var `${elementsType[i]}` = `${elementsType[i]}`;
+}
+
+var chat = document.getElementById('chat');
+var msg = [
+    'Hi! I am Dr. Prateek Raj Gautam. ',
+    'I have earned my Ph.D.in 2021 from Motilal Nehru National Institute of Technology at Allahabad, Prayagraj, India.under the supervision of Dr.Arvind Kumar(Associate Professor ECED, MNNIT) on the topic "Energy-Efficient 2D and 3D Localization in Wireless Sensor Networks using Single Anchor Node.'
+];
+
+
+async function addChatMessages(chat, msg) {
+    console.log("addChatMessages(chat, msg)")
+    for await (i of msg) {
+        setTimeout(function () {
+            console.log(i);
+            chat.append(gen("p", `p${i}`, "hi", 'p1'));
+            var pElement = document.getElementById(`p${i}`);
+            pElement.innerHTML = "";
+            typeAnimate(pElement, msg[i]);
+        }, 100);
+    };
+
+};
+
+async function typeAnimate(pid, text) {
+    console.log("typeAnimate")
+    console.log(pid)
+    setTimeout(() => {
+        for (i in text) {
+            insertLetter(pid, text[i])
+        }
+    }, 100);
+};
+
+async function insertLetter(pid, text) {
+    setTimeout(async () => {
+        console.log(text)
+        pid.innerHTML += text;
+    }, 1000);
+
+}
+addChatMessages(chat, msg);
