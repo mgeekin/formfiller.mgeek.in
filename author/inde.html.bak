@@ -1,0 +1,382 @@
+<!-- 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FormHelper.mgeek.in</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 0px;
+        background-color: #112;
+        color: white;
+        text-decoration: none;
+        list-style: none;
+        padding: none;
+        margin: none;
+        font-size: 1rem;
+
+    }
+
+    #code {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.527);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #pdfbackground {}
+
+    ul {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    a {
+        color: #14b2ce;
+        text-decoration: none;
+    }
+
+    .selectDisable {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    .selectEnable {
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -o-user-select: text;
+        user-select: text;
+    }
+
+    #container {
+        display: block;
+        background-color: #EEE;
+    }
+
+    #left-content {
+        display: inline-block;
+        background-color: #223;
+        padding: 0 15vw;
+        transition: box-shadow 100ms ease-in;
+    }
+
+    #left-content>ul {
+        display: inline-block;
+
+    }
+
+    #left-content>ul>li {
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    #left-content>ul>li:after {
+        content: " |";
+
+    }
+
+    #left-content>ul>li:nth-child(1):before {
+        content: "| ";
+
+    }
+
+    #left-content>h3 {
+        display: none;
+    }
+
+    #left-content>p {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.288);
+    }
+
+    #pdf {
+        display: inline-block;
+        width: 100%;
+        background-color: #122;
+        text-align: center;
+        padding: 0px;
+    }
+
+
+
+
+    #pdfrelated {
+        margin: 10px, 0px;
+        padding: 10%;
+        text-align: center;
+    }
+
+    #pdfObject {
+        height: 100vw;
+        width: 80vw;
+    }
+
+    #Email {
+        display: inline-block;
+        width: 60%;
+        background-color: #221;
+        padding: 5% 20%;
+        text-align: right;
+    }
+
+    #image-group {
+        width: 200px;
+
+    }
+
+    #image-group>a {
+        display: inline-block;
+    }
+
+    .p1 {
+        padding: 20px 40px;
+        box-shadow: rgb(93, 93, 121) 2px 2px 2px;
+        border-radius: 30px;
+        max-width: 80%;
+    }
+
+    .p1:hover {
+        box-shadow: rgba(86, 108, 136, 0.582) 3px 3px 2px;
+
+    }
+
+    #chat {
+        background: hsla(125, 100%, 70%, 0);
+    }
+
+
+    .p1 {
+        background: hsla(0, 0%, 100%, 0.103);
+        padding: 10px 40px;
+        box-shadow: rgb(212, 212, 238) 2px 2px 2px;
+        border-radius: 30px;
+        max-width: 80%;
+    }
+
+    footer {
+        padding: 20px, 20%;
+        min-height: 50px;
+        color: #cbb;
+        background-color: #110;
+        text-align: right;
+    }
+
+    .embedImg {
+        width: 40px;
+    }
+
+    .pdfBgImg {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 10px;
+        margin: 20px 0px;
+        color: #fff;
+        background-color: rgb(12, 165, 192);
+    }
+
+    .button:hover {
+        box-shadow: rgb(7, 226, 255) 3px 3px 2;
+    }
+
+    .button>a {
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+    #software {
+        background-color: rgb(75, 69, 69);
+        margin: 0px;
+        padding: 40px 20%;
+    }
+
+    table {
+        background-color: rgb(105, 25, 56);
+        padding: 15px;
+        border: rgb(75, 69, 69) solid 2px;
+        margin: auto;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    thead {
+        background-color: rgb(12, 12, 37);
+
+    }
+
+    tr {
+        display: block;
+        padding: 10px;
+    }
+
+    td {
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgb(24, 25, 29);
+    }
+
+    td:nth-child(odd) {
+        width: 20%;
+        text-align: left;
+    }
+
+    td:nth-child(even) {
+        width: 60%;
+    }
+</style>
+</head>
+
+<body>
+
+
+
+
+    <app id="app">
+        <div id="container">
+
+            <div id="left-content">
+                <div id="chat">
+                    <!--<h2> About Me</h2>-->
+                    <p class="p1">
+                        Well, I was annoyed by the repeated task of filling web forms and I searched for any automation
+                        solution like autofill extensions, etc.<br /> However. they are inefficient and do not work on
+                        restricted websites.
+                    </p>
+                    <p class="p1">
+                        Therefore I tried to automate this form filling process. <br />Initially I made it for my
+                        personal use.<br />
+                        Later, I shared it with my friends and colleagues, and they liked it. <br />So I thought it
+                        might
+                        be
+                        useful for others and save their time.
+                    </p>
+                    <p class="p1">
+                        Hi! I am <b>Dr. Prateek Raj Gautam</b>.
+                    </p>
+                    <p class="p1">
+                        I have earned my <b>Ph.D.</b> in 2021 from <b>Motilal Nehru National Institute of Technology at
+                            Allahabad</b>,
+                        Prayagraj, India. under the supervision of <b>Dr. Arvind Kumar</b> (Associate Professor ECED,
+                        MNNIT)
+                        on
+                        the
+                        topic "<b><i>Energy-Efficient 2D and 3D Localization in Wireless Sensor Networks using Single
+                                Anchor
+                                Node.</i></b>"
+                    </p>
+                    <p class="p1">
+                        I have around <b>4 years of pre-PhD teaching experience</b> as an <b>Assistant Professor</b> at
+                        Allen
+                        house
+                        Institute of Technology and Naraina College of Engineering and Technology.
+
+                    </p>
+                    <p class="p1">
+                        I have received <b>M.Tech.</b> degree in electronics and communication engineering from
+                        <b>Harcourt
+                            Butler
+                            Technological Institute</b> Kanpur, India, in 2011.
+
+                    </p>
+                    <p class="p1">My research interests are in the energy-efficient scheme for wireless sensor networks,
+                        image
+                        processing, CDMA, IDMA, and brain wave mapping.
+
+                    </p>
+                    <p class="p1">
+                        I have advanced experience with subject-related software like <b>MATLAB, Python, CST Studio
+                            Suite,
+                            LTspice.</b>
+                    </p>
+                    <p class="p1"> I have sound skills at producing high-quality documents and illustrations in
+                        <b>LaTeX/Tikz</b> and
+                        2d and 3d drawing and animation software like <b>Inkscape, GIMP, and Blender</b>.
+
+                    </p>
+                    <p class="p1"> I would like to research in the field of wireless networks and their application.
+                        <i>Currently, I
+                            am exploring optimization and machine learning and its applications in Wireless Sensor
+                            Networks.</i>
+                    </p>
+                </div>
+                <!--<h2> Connect with me</h2>-->
+                <p>
+                <h1>Connect</h1>
+                <h2>
+                    Research
+                </h2>
+                <ul id="research-links">
+                    <li><a href="https://www.researchgate.net/profile/Prateek-Raj-Gautam"
+                            target="_blank">Researchgate</a>
+                    </li>
+                    <li><a href="https://scholar.google.co.in/citations?user=slZHj6cAAAAJ&hl=en" target="_blank">Google
+                            scholar</a>
+                    </li>
+                    <li><a href="https://orcid.org/0000-0002-2889-4275" target="_blank">ORCID</a></li>
+                    <li><a href="https://publons.com/researcher/2100291/prateek-raj-gautam"
+                            target="_blank">Publons/ResearchID</a>
+                    </li>
+                    <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57194277572"
+                            target="_blank">Scopus</a>
+                    </li>
+
+                </ul>
+                </p>
+
+                <p>
+                <h2>
+                    Social
+                </h2>
+                <ul id="social-links">
+                    <li><a href="https://t.me/prateekrajgautam" target="_blank">Telegram</a></li>
+                    <li><a href="https://www.linkedin.com/in/prateekrajgautam/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/prateekrajgautam" target="_blank">Github</a></li>
+                    </li>
+
+                    <li><a
+                            href="mailto:prateekrajgautam@gmail.com?subject=From FormHelper website&body=Hello, Dear Dr. Prateek Raj Gautam">Gmail</a>
+                    </li>
+
+                </ul>
+                </p>
+
+
+    </app>
+    <script>
+
+        /*
+t1 = window.setTimeout(function () {
+    var redirectUrl = "https://www.researchgate.net/profile/Prateek-Raj-Gautam";
+    //var redirectUrl = "https://formhelper.mgeek.in";
+    window.location.href = redirectUrl;
+}, 10000); */
+    </script>
+    <!-- <script type="text/javascript" src="/eel.js"></script> -->
+
+    <script src="./script.js" async defer></script>
+    <script src="/assets/scripts/header.js" async defer></script>
+
+    <script src="/assets/scripts/footer.js" async defer></script>
+</body>
+-->

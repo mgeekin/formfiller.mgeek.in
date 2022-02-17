@@ -1,9 +1,9 @@
-
+/* 
 t1 = window.setTimeout(function () {
     var redirectUrl = "https://www.researchgate.net/profile/Prateek-Raj-Gautam";
     //var redirectUrl = "https://formhelper.mgeek.in";
     //window.location.href = redirectUrl;
-}, 10000);
+}, 10000); */
 
 var releaseUrl = "/assets/release/Release.zip";
 var ytIdentifier = 'AU6rH9O8WfA'
@@ -16,81 +16,7 @@ var webMvideoElement = `<video autoplay loop muted playsinline>
 </video>`;
 
 
-function gen(elementtype, idin, htmlin, classin) {
-    var element = document.createElement(elementtype);
-    if (idin != undefined && idin != "") {
-        element.id = idin;
-    }
-    if (htmlin != undefined) {
-        if (htmlin.nodeName === undefined) {
-            console.log(typeof (htmlin))
-            if (typeof (htmlin) != "object") {
-                element.innerHTML = htmlin;
-                element.value = htmlin;
-            }
-            if (typeof (htmlin) == "object") {
-                element.innerHTML = htmlin;
-                element.value = htmlin;
-            }
-        };
-        if (htmlin.nodeName != undefined) {
-            element.append(htmlin);
-            console.log(htmlin);
-            console.log(htmlin.nodeName);
-        };
-    }
-
-    if (classin != undefined && classin != "") {
-        element.classList.add(classin);
-    }
-    return element;
-};
-
-
-function gennew(elementtype, idin, htmlin, classin) {
-    var elementArray = document.createElement("path");
-    if (typeof (htmlin) == "object") {
-        console.log(htmlin.length)
-        for (i = 0; i < htmlin.length; i++) {
-            var element = document.createElement(elementtype);
-            if (idin != undefined && idin != "") {
-                element.id = idin;
-            }
-            if (htmlin != undefined) {
-                if (htmlin.nodeName === undefined) {
-                    console.log(typeof (htmlin))
-                    element.innerHTML = htmlin[i];
-                    element.value = htmlin[i];
-                };
-                if (htmlin.nodeName != undefined) {
-                    element.append(htmlin[i]);
-                    console.log(htmlin);
-                    console.log(htmlin.nodeName);
-                };
-            }
-
-            if (classin != undefined && classin != "") {
-                element.classList.add(classin);
-            }
-            elementArray.append(element);
-        }
-        elementArray.outerHTML = ""
-        return elementArray;
-    }
-}
-
-const body = document.querySelector("app");
-const header = gen("div", "header");
-header.append(gen("h1", "appTitle", "Form Helper"));
-header.append(gen("h4", "subTitle", "Automation tool for filling forms and data entry"));
-const main = gen("div", "main");
-const footer = gen("div", "footer", `<i>by Dr. Prateek Raj Gautam</i>`);
-
-body.append(header);
-//header.append(gen("p", "hint", "demo form to test working of FormHelper no data is saved here"))
-body.append(main);
-//body.append(footer);
-
+var TPoll = `<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-post="FreeFormHelper/4" data-width="100%"></script>`;
 var og = [
     ['title', 'Automation tool for filling forms and data entry'],
     ['description', 'It provides a way to fill forms in less time.    1. Open your form where data needs to be filled'],
@@ -156,7 +82,7 @@ dlbtn.href = releaseUrl;
 dlbtn.download = "FormHelper.mgeek.in.zip"
 download.append(gen("a", "demoForm", "Demo web form to test working with app", "button"))
 demoForm.href = "demoform/"
-demoForm.style.marginLeft = "20px";
+// demoForm.style.marginLeft = "20px";
 download.append(gen("p", "", "zip file contains Demo files you can edit with your data"))
 
 
@@ -167,9 +93,9 @@ ytcode.innerHTML = youtubeCode;
 //yt.append(gen("ytcode", "ytcomment"));
 //ytcomment.innerHTML = youtubeComments;
 
-
-
-
+/* main.append(gen("div", "telegrampoll", gen("h2", "", "Feedback"), "section"))
+telegrampoll.append(gen("p", "poll", TPoll));
+ */
 
 
 

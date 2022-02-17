@@ -1,79 +1,4 @@
-:root{
-    font-size: 1rem;
-    font-family: sans-serif;
-    padding:0;
-    margin:0;
-}
-body,li,ul,a{
-    text-decoration: none;
-    list-style: none;  
-    font-size: large; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding:0;
-    margin:0;
-}
 
-app{
-    color:white;
-    background-color: rgb(73, 2, 43);
-    padding:0;
-    margin:0;
-    display:flex;
-    flex-direction:column;
-    height:100vh;
-    width:100%;
-    
-}
-
-#header,#footer,#main{
-    display:block;
-    padding:5px;
-}
-
-#header{
-    background-color: hsl(233, 76%, 6%);
-    height:10vh;
-    
-}
-
-#main{
-    background: linear-gradient(-30deg,hsl(237, 79%, 9%) 70%, hsl(207, 78%, 34%) 200%);
-    display:flex;
-    flex-direction: column;
-    flex: 100%;
-    height:calc(80vh);
-    
-}
-
-.row{
-    display:flex;;
-}
-
-#footer{
-    background-color: hsl(220, 100%, 1%);
-    bottom:0px;
-    width:100%;
-
-    height:10vh;
-}
-
-.button,.typebutton{
-    display:inline-block;
-    border-radius: 5px;
-    padding:5px;
-    color:rgb(255, 255, 255);
-    background:linear-gradient(0deg,hsl(240, 33%, 16%) 80%,hsl(239, 25%, 49%) 100%) ;
-    text-align: center;
-    margin:2px;
-    font-size: small;
-
-    box-shadow: 1px 1px 1px rgb(21, 164, 247);
-}
-.typebutton:hover{
-    box-shadow: 2px 2px 3px rgb(21, 164, 247);
-
-    
-}
 
 
 #fileOpen{
@@ -106,14 +31,50 @@ div:last-of-type{
 
 
 #chat{
+    margin-top:100px;
+    margin-left: 15%;
+    margin-right: 15%;
     background: hsla(125, 100%, 70%, 0);
 }
 
 
-.p1 {
+.chatbubble {
     background: hsla(0, 0%, 100%, 0.178);
     padding: 10px 40px;
     box-shadow: rgb(212, 212, 238) 2px 2px 2px;
-    border-radius: 30px;
-    max-width: 80%;
+    border-radius: 20px;
+    margin:20px;
+    text-transform: sentencecase;
+}
+
+#contact{
+    margin:auto 10%;
+    color:white;
+}
+#contact>ul>li>a{
+    text-decoration: none;
+    color:aqua;
+    margin:5px;
+
+}
+#contact>ul{
+    display: block;
+    margin-bottom: 100px;
+    min-height: 200px;
+}
+
+#contact>ul>li{    display: inline-block;
+    padding:10px;font-size: small;}
+
+#contact>ul>li:hover{    display: inline-block;
+    font-size: large;
+    padding:0px;
+}
+
+
+#contact>ul>li::after{
+    content: '|';
+}
+#contact>ul>li::before{
+    content: '|';
 }
