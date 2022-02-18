@@ -1,0 +1,114 @@
+:root {
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body, li, ul, a {
+  text-decoration: none;
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+app {
+  color: white;
+  background-color: #49022b;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+#header, #footer, #main {
+  display: block;
+  padding: 5px;
+}
+
+#header {
+  background-color: #04061b;
+  height: 10vh;
+}
+
+#main {
+  background: linear-gradient(-30deg, #050729 70%, #135d9a 200%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  height: calc(80vh);
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer {
+  background-color: #000205;
+  bottom: 0px;
+  width: 100%;
+  height: 10vh;
+}
+
+.button, .typebutton {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #1b1b36), to(#5e5f9c));
+  background: linear-gradient(0deg, #1b1b36 80%, #5e5f9c 100%);
+  text-align: center;
+  margin: 2px;
+  font-size: small;
+  -webkit-box-shadow: 1px 1px 1px #15a4f7;
+          box-shadow: 1px 1px 1px #15a4f7;
+}
+
+.typebutton:hover {
+  -webkit-box-shadow: 2px 2px 3px #15a4f7;
+          box-shadow: 2px 2px 3px #15a4f7;
+}
+
+#fileOpen {
+  background: radial-gradient(rgba(255, 255, 255, 0.493) 0%, rgba(53, 173, 243, 0.493) 200%);
+  padding: 50px;
+  min-width: 400px;
+  border-radius: 20px;
+  margin: 50px;
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.tdl {
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.input {
+  min-width: 400px;
+}
+
+div:last-of-type {
+  margin-bottom: 100px;
+}
+/*# sourceMappingURL=pagesytle.css.map */

@@ -30,7 +30,7 @@ function gen(elementtype, idin, htmlin, classin) {
 var appmain = document.getElementById('app');
 var header = gen("div", "header");
 var main = gen("div", "main");
-var footer = gen("div", "footer", gen("div", 'copyright', gen("p", "", `&copy 2022 <a href='https://mgeek.in'>mGeek.in</a> Designed by <i>Dr. Prateek Raj Gautam</i>`)));
+var footer = gen("div", "footer");
 appmain.append(header, main, footer);
 
 

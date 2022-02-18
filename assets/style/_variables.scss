@@ -1,0 +1,16 @@
+/* Fonts and Variables */
+@import url("https://fonts.googleapis.com/css?family=Exo|Play|Roboto+Mono|Unica+One");
+$colorBG:linear-gradient(-30deg, hsl(237, 79%, 9%) 70%, hsl(207, 78%, 34%) 200%) no-repeat scroll 0 !default;
+$color:#ddd !default;
+$fontFamily:"Roboto Mono",
+"Play",
+"Exo",
+'Verdana' !default;
+$fontHeading:"Exo",
+'Verdana';
+$colorButton:linear-gradient(0deg, hsl(197, 100%, 29%) 80%, hsl(239, 25%, 49%) 100%) no-repeat scroll 0 !default;
+$colorButtontext:#fff;
+$linkcolor:#ddd;
+$colorBody:hsl(237, 79%, 9%);
+$footcolor:hsl(197, 61%, 63%);
+$siteTitleValue:'FormHelper';

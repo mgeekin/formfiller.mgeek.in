@@ -1,0 +1,86 @@
+/* Reset style */
+:root {
+    font-size: 1rem;
+    ;
+    font-family: $fontFamily;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: $colorBody;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $linkcolor;
+}
+
+button,
+.button {
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid hsla(21, 164, 244, .5);
+    padding: 5px;
+    background: $colorButton;
+    color: $colorButtontext;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 1px 1px 1px rgb(21, 164, 247);
+    text-transform: capitalize;
+
+    &:hover {
+
+        border: 2px solid hsla(21, 164, 244, .8);
+        box-shadow: 2px 2px 2px rgb(0, 162, 255);
+
+        margin: 9px;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: $fontHeading;
+}
+
+
+
+
+
+.section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+
+    #main {
+        background: $colorBG;
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+}

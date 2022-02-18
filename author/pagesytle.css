@@ -1,0 +1,80 @@
+#fileOpen {
+  background: radial-gradient(rgba(255, 255, 255, 0.493) 0%, rgba(53, 173, 243, 0.493) 200%);
+  padding: 50px;
+  min-width: 400px;
+  border-radius: 20px;
+  margin: 50px;
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.tdl {
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.input {
+  min-width: 400px;
+}
+
+div:last-of-type {
+  margin-bottom: 100px;
+}
+
+#chat {
+  margin-top: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
+  background: rgba(102, 255, 115, 0);
+}
+
+.chatbubble {
+  background: rgba(255, 255, 255, 0.178);
+  padding: 10px 40px;
+  -webkit-box-shadow: #d4d4ee 2px 2px 2px;
+          box-shadow: #d4d4ee 2px 2px 2px;
+  border-radius: 20px;
+  margin: 20px;
+  text-transform: sentencecase;
+}
+
+#contact {
+  margin: auto 10%;
+  color: white;
+}
+
+#contact > ul > li > a {
+  text-decoration: none;
+  color: aqua;
+  margin: 5px;
+}
+
+#contact > ul {
+  display: block;
+  margin-bottom: 100px;
+  min-height: 200px;
+}
+
+#contact > ul > li {
+  display: inline-block;
+  padding: 10px;
+  font-size: small;
+}
+
+#contact > ul > li:hover {
+  display: inline-block;
+  font-size: large;
+  padding: 0px;
+}
+
+#contact > ul > li::after {
+  content: '|';
+}
+
+#contact > ul > li::before {
+  content: '|';
+}
+/*# sourceMappingURL=pagesytle.css.map */

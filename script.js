@@ -36,12 +36,15 @@ for (i = 0; i < og.length; i++) {
 
 //instructions
 main.append(gen("div", "instructions", gen("h2", "", "How to use"), "section"))
-instructions.append(gen("ol", "InstList"));
+instructions.append(gen("ul", "InstList"));
 list = [
     "Open your form where data needs to be filled",
     "press the align button to move form window and formhelper in side by side",
     "Load your data file (*.xlsx) in form helper",
-    "    Select the type area of form then click click on button to fill it with data."
+    "Select the type area of form then click on button to fill it with data.",
+    "Your data is not stored anywhere",
+    "App requires internet to check licence information at the start",
+    "Downloading BibTeX database from DOIs also requires internet"
 ]
 for (i = 0; i < list.length; i++) {
     InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`));
