@@ -1,7 +1,6 @@
 /* Reset style */
 :root {
     font-size: 1rem;
-    ;
     font-family: $fontFamily;
     padding: 0;
     margin: 0;
@@ -14,6 +13,7 @@ body {
     margin: 0;
     width: 100%;
     background: $colorBody;
+    color: $color;
 }
 
 ul {
@@ -50,8 +50,14 @@ button,
     }
 }
 
-h1,
-h2,
+h1 {
+    font-family: $fontHeading;
+}
+
+h2 {
+    font-family: $fontHeading;
+}
+
 h3 {
     font-family: $fontHeading;
 }
@@ -61,10 +67,16 @@ h3 {
 
 
 .section {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 30%;
+    padding: 5%;
+
 }
 
+// .section:nth-child(even) {
+//     border-radius: 10px;
+//     background: hsla(66, 100%, 1%, .1);
+//     box-shadow: 1px 1px 10px hsla(180, 100%, 50%, 0.534);
+// }
 
 #app {
     display: flex;

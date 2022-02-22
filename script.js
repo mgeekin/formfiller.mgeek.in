@@ -5,19 +5,21 @@ t1 = window.setTimeout(function () {
     //window.location.href = redirectUrl;
 }, 10000); */
 
-var releaseUrl = "/assets/release/Release.zip";
-var ytIdentifier = 'AU6rH9O8WfA'
-var youtubeCode = `<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/${ytIdentifier}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+const releaseUrl = "/assets/release/Release.zip";
+const GithubIssueUrl = "https://github.com/mgeekin/formfiller.mgeek.in/issues";
+const ytIdentifier = 'AU6rH9O8WfA'
+const youtubeCode = `<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/${ytIdentifier}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+const youtubeUrl = `https://www.youtube.com/watch?v=${ytIdentifier}`;
 //var youtubeComments = `<div class="ytContainer"><iframe class="ytVideo" src="http://gdata.youtube.com/feeds/api/videos/${ytIdentifier}/comments"></iframe></div>`
-var gifSrc = '/assets/img/preview.gif';
-var webmSrc = '/assets/img/preview.webm';
-var webMvideoElement = `<video autoplay loop muted playsinline>
+const gifSrc = '/assets/img/preview.gif';
+const webmSrc = '/assets/img/preview.webm';
+const webMvideoElement = `<video autoplay loop muted playsinline>
 <source src="${webmSrc}" type="video/webm">
 </video>`;
 
 
-var TPoll = `<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-post="FreeFormHelper/4" data-width="100%"></script>`;
-var og = [
+const TPoll = `<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-post="FreeFormHelper/4" data-width="100%"></script>`;
+const og = [
     ['title', 'Automation tool for filling forms and data entry'],
     ['description', 'It provides a way to fill forms in less time.    1. Open your form where data needs to be filled'],
     ['type', 'website'],
@@ -38,13 +40,12 @@ for (i = 0; i < og.length; i++) {
 main.append(gen("div", "instructions", gen("h2", "", "How to use"), "section"))
 instructions.append(gen("ul", "InstList"));
 list = [
-    "Open your form where data needs to be filled",
-    "press the align button to move form window and formhelper in side by side",
-    "Load your data file (*.xlsx) in form helper",
+    "Open your form where data needs to be filled.",
+    "Press the align button to move form window and formhelper in side by side.",
+    "Load your data file (*.xlsx).",
     "Select the type area of form then click on button to fill it with data.",
-    "Your data is not stored anywhere",
-    "App requires internet to check licence information at the start",
-    "Downloading BibTeX database from DOIs also requires internet"
+    "Your data is not stored anywhere.",
+    '* App requires internet to check licence information at the start and when using "Download BiBTeX from DOI" function.',
 ]
 for (i = 0; i < list.length; i++) {
     InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`));
@@ -100,6 +101,20 @@ ytcode.innerHTML = youtubeCode;
 telegrampoll.append(gen("p", "poll", TPoll));
  */
 
+
+
+
+//feedback
+main.append(gen("div", "feedback", "", "section"));
+feedback.append(gen("h2", "", "Feedback and Report Issue"));
+feedback.append(gen("p", '', "Plese send Feedback on Youtube and Issue on Github"));
+feedback.append(gen("a", "issue", "Feedback on Youtube Comments", "button"));
+issue.href = youtubeUrl;
+issue.target = "_blank";
+feedback.append(gen("a", "issue", "Create Issue on Github", "button"));
+issue.href = GithubIssueUrl;
+issue.target = "_blank";
+// feedback.append(gen("a", "demoForm", "Demo web form to test working with app", "button"))
 
 
 

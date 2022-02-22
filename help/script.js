@@ -1,48 +1,8 @@
 
-t1 = window.setTimeout(function () {
-    //var redirectUrl = "https://www.researchgate.net/profile/Prateek-Raj-Gautam";
-    var redirectUrl = "https://formhelper.mgeek.in";
-    window.location.href = redirectUrl;
-}, 10000);
-
-
-function gen(elementtype, idin, htmlin, classin) {
-    var element = document.createElement(elementtype);
-    if (idin != undefined) {
-        element.id = idin;
-    }
-    if (htmlin != undefined) {
-        if (htmlin.nodeName === undefined) {
-            element.innerHTML = htmlin;
-            element.value = htmlin;
-        };
-        if (htmlin.nodeName != undefined) {
-            element.append(htmlin);
-            console.log(htmlin);
-            console.log(htmlin.nodeName);
-        };
-    }
-
-    if (classin != undefined) {
-        element.classList.add(classin);
-    }
-    return element;
-};
-
-const body = document.querySelector("app");
-const header = gen("div", "header");
-header.append(gen("h2", "appTitle", "Form Helper"));
-const main = gen("div", "main");
-const footer = gen("div", "footer", `<i>by Dr. Prateek Raj Gautam</i>`);
-
-body.append(header);
-//header.append(gen("p", "hint", "demo form to test working of FormHelper no data is saved here"))
-body.append(main);
-//body.append(footer);
-
-
-//main.append(gen("H1", "Heading1", "Heading 1"));
-
+main.append(gen('section', 'sec', "", 'section'));
+sec.append(gen("H1", "Heading1", "Redirecting to Youtube Instructions"));
+sec.append(gen('a', 'yt', 'https://www.youtube.com/watch?v=AU6rH9O8WfA'));
+yt.href = 'https://www.youtube.com/watch?v=AU6rH9O8WfA';
 
 //a.append(r)
 var formfields = [
@@ -52,7 +12,7 @@ var formfields = [
     }
 ];
 
-
+/* 
 for (var i = 0; i < formfields.length; i++) {
     var heading = formfields[i].heading;
     var datafield = formfields[i].data;
@@ -73,21 +33,16 @@ for (var i = 0; i < formfields.length; i++) {
     }
     //document.getElementById(`lia${ i } `).href = "/";
 };
+ */
 
 
 
 
 
-//addButton("TEMP", main);
 
-function addButton(text, target) {
-    var button = document.createElement("div");
-    button.classList.add("typebutton");
-    button.innerText = text;
-    button.onclick = function () {
-        console.log(this.innerText);
-        eel.typeit(this.innerText, 0);
-    };
-    target.append(button);
+t1 = window.setTimeout(function () {
+    //var redirectUrl = "https://www.researchgate.net/profile/Prateek-Raj-Gautam";
+    var redirectUrl = "https://www.youtube.com/watch?v=AU6rH9O8WfA";
+    window.location.href = redirectUrl;
+}, 30000);
 
-}

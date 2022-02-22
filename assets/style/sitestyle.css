@@ -15,6 +15,7 @@ body {
   margin: 0;
   width: 100%;
   background: #050729;
+  color: #aaf2ff;
 }
 
 ul {
@@ -53,15 +54,21 @@ button:hover,
   margin: 9px;
 }
 
-h1,
-h2,
+h1 {
+  font-family: "Exo", "Verdana";
+}
+
+h2 {
+  font-family: "Exo", "Verdana";
+}
+
 h3 {
   font-family: "Exo", "Verdana";
 }
 
 .section {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 30%;
+  padding: 5%;
 }
 
 #app {
@@ -172,6 +179,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 30%;
 }
 
 #footer #copyright {
