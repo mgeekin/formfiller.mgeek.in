@@ -1,4 +1,7 @@
 
+
+
+
 var formfields = [
     {
         "heading": "Basic",
@@ -26,16 +29,22 @@ var formfields = [
         "data": ['Title', 'Journal', "Authors", "Year", "pages"]
     }
 ];
-
+main.append(gen("div", `sec`, "", 'section'));
+sec.append(gen("h1", ``, "Demo Form", ''));
+sec.append(gen("p", ``, "The data is not saved", ''));
 
 for (var i = 0; i < formfields.length; i++) {
     var heading = formfields[i].heading;
     var datafield = formfields[i].data;
     console.log(datafield)
-    main.append(gen("div", `div${heading}`));
 
-    document.getElementById(`div${heading}`).append(gen("h3", `heading${i}`, `${heading}`));
+    sec.append(gen("div", `div${heading}`));
+
+    // document.getElementById(`div${heading}`).append(gen("h3", `heading${i}`, `${heading}`));
     document.getElementById(`div${heading}`).append(gen("table", `table${i}`));
+    document.getElementById(`table${i}`).append(gen("thead", `thead${i}`));
+    document.getElementById(`thead${i}`).append(gen("h3", `heading${i}`, `${heading}`));
+    document.getElementById(`table${i}`).append(gen("tbody", `tbody${i}`));
     for (var j = 0; j < datafield.length; j++) {
         var dataentry = datafield[j];
         console.log(dataentry);
@@ -43,14 +52,14 @@ for (var i = 0; i < formfields.length; i++) {
         var ltext = gen("td", `formltd${i}${j}`, dataentry, "tdl");
         var rinput = gen("td", `formrtd${i}${j} `, gen("input", `datafield[j]`, "", "input"));
         //document.getElementById(`$forminput${i} `).value = `$forminput${i} `;
-        document.getElementById(`table${i}`).append(row);
+        document.getElementById(`tbody${i}`).append(row);
         row.append(ltext, rinput);
     }
     //document.getElementById(`lia${ i } `).href = "/";
 };
 
 
-main.append(gen("div", "resetAll", "Reset All", "button"));
+sec.append(gen("div", "resetAll", "Reset All", "button"));
 resetAll.addEventListener("click", cleaninput);
 
 function cleaninput() {

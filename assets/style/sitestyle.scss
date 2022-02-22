@@ -29,15 +29,50 @@
 
 }
 
-.tdl {
-    width: 200px;
-    margin-left: 30px;
-    margin-right: 10px;
-    text-align: right;
+table {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #999;
+    margin: 20px;
+    width: 100%;
+
+    thead {
+        // background: rgba(1, 1, 1, 0.3);
+        padding: 2px;
+
+        tr {}
+    }
+
+    tbody {
+
+
+        tr {
+            padding: 2px;
+
+            &:nth-child(odd) {
+                background: rgba(1, 1, 1, 0.5);
+            }
+
+            &:nth-child(even) {
+                background: rgba(236, 236, 236, 0.2);
+
+            }
+
+            td {
+                width: 70%;
+
+                &:nth-child(1) {
+                    width: 150px;
+                }
+            }
+
+        }
+    }
 }
 
 .input {
-    min-width: 400px;
+    margin: 2px;
+    width: 100%;
+    background: #BBC;
 }
 
 
