@@ -1,4 +1,4 @@
-main.append(gen("div", "chat"));
+main.append(gen("div", "chat", '', 'section'));
 M = ['Well, I was annoyed by the repeated task of filling web forms and I searched for any automation solution like autofill extensions, etc.<br /> However. they are inefficient and do not work on restricted websites.',
     ' Therefore I tried to automate this form filling process. <br />Initially I made it for my\
     personal use.<br />    Later, I shared it with my friends and colleagues, and they liked it. <br />So I thought it\
@@ -51,7 +51,7 @@ async function addChatMessages(chat, Mi, i) {
 
 
 var contact = `                <p>
-<h1 id='contact'>Connect</h1>
+<h1 id='contact'>Contact</h1>
 <h2>
     Research
 </h2>
@@ -90,4 +90,4 @@ var contact = `                <p>
 </ul>
 </p>`;
 
-main.append(gen("div", "contact", contact));
+main.append(gen("div", "contact", contact, 'section'));

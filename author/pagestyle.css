@@ -20,10 +20,6 @@
   min-width: 400px;
 }
 
-div:last-of-type {
-  margin-bottom: 100px;
-}
-
 #chat {
   margin-top: 100px;
   margin-left: 15%;
