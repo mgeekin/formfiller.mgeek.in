@@ -1,3 +1,17 @@
+const div = 'div';
+const p = 'p';
+const span = 'span';
+const img = 'img';
+const h1 = 'h1';
+const h2 = 'h2';
+const h3 = 'h3'
+const table = 'table';
+const thead = 'thead';
+const tbody = 'tbody';
+const tr = 'tr';
+const td = 'td';
+
+
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
     if (idin != undefined && idin != "") {
@@ -27,10 +41,15 @@ function gen(elementtype, idin, htmlin, classin) {
     }
     return element;
 };
-var appmain = document.getElementById('app');
-var header = gen("div", "header");
-var main = gen("div", "main");
-var footer = gen("div", "footer");
+
+
+/* document.body.innerHTML = '';
+document.body.append(gen(div, "app", "", "app")); */
+
+const appmain = document.getElementById('app');
+const header = gen(div, "header");
+const main = gen(div, "main", "", "container");
+const footer = gen(div, "footer");
 appmain.append(header, main, footer);
 
 

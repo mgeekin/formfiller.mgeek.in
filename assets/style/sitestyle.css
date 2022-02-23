@@ -1,5 +1,16 @@
 /* Fonts and Variables */
 @import url("https://fonts.googleapis.com/css?family=Exo|Play|Roboto+Mono|Unica+One");
+.gold {
+  /* Set the background color */
+  background: #918c00;
+  background: linear-gradient(130deg, #8a8300 0%, #bdaa00 31%, #a19700 51%, #ffdb00 71%, #4b4101 100%);
+  /* Mask the color to the text, and remove the rest  */
+  -webkit-background-clip: text;
+  /* Make the text fill color value transparent so the masked background color comes through */
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 0px rgba(226, 219, 0, 0.2);
+}
+
 /* Reset style */
 :root {
   font-size: 1rem;
@@ -15,7 +26,7 @@ body {
   margin: 0;
   width: 100%;
   background: #050729;
-  color: #aaf2ff;
+  color: #EEF;
 }
 
 ul {
@@ -66,8 +77,12 @@ h3 {
   font-family: "Exo", "Verdana";
 }
 
+p {
+  padding-top: 20px;
+}
+
 .section {
-  margin-top: 30%;
+  margin-top: 15%;
   padding: 5%;
 }
 
@@ -82,10 +97,7 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: white;
-  padding: 0;
-  margin: 0;
-  max-width: 100%;
+  color: #EEF;
 }
 
 #app #main {
@@ -97,8 +109,11 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 15%;
-  padding-right: 15%;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #header {
