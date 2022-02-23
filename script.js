@@ -108,12 +108,12 @@ telegrampoll.append(gen("p", "poll", TPoll));
 main.append(gen("div", "feedback", "", "section"));
 feedback.append(gen("h2", "", "Feedback and Report Issue"));
 feedback.append(gen("p", '', "Plese send Feedback on Youtube and Issue on Github"));
-feedback.append(gen("a", "issue", "Feedback on Youtube Comments", "button"));
-issue.href = youtubeUrl;
-issue.target = "_blank";
-feedback.append(gen("a", "issue", "Create Issue on Github", "button"));
-issue.href = GithubIssueUrl;
-issue.target = "_blank";
+feedback.append(gen("a", "ytComment", "Feedback on Youtube Comments", "button"));
+feedback.append(gen("a", "gitIssue", "Create Issue on Github", "button"));
+ytComment.href = youtubeUrl;
+ytComment.target = "_blank";
+gitIssue.href = GithubIssueUrl;
+gitIssue.target = "_blank";
 // feedback.append(gen("a", "demoForm", "Demo web form to test working with app", "button"))
 
 
