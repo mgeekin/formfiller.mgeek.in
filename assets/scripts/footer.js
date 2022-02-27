@@ -1,7 +1,8 @@
 //footer.append(gen("footsection", "footlinks", "", 'section'));
-footer.append(gen("div", "copyright", ""));
-copyright.append(gen("p", "copyurl", `&copy 2022 <a href="http://mgeek.in">mGeek.in</a>`));
-copyright.append(gen("p", "copyauthor", `Designed by <a href="http://mgeek.in/author">Dr. Prateek Raj Gautam</a>`));
+// footer.append(gen("div", "copyright", ""));
+app.append(gen("div", "copyright", ""));
+copyright.append(gen("span", "copyurl", `&copy 2022 <a href="http://mgeek.in">mGeek.in</a>`));
+copyright.append(gen("span", "copyauthor", `Designed by <a href="http://mgeek.in/author">Dr. Prateek Raj Gautam</a>`));
 /* footer.append(gen("footsection", "footlinks", "", 'section')); footer.append(gen("footsection", "footlinks", "", 'section'));
 
 

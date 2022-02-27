@@ -31,7 +31,7 @@ var formfields = [
 ];
 main.append(gen("div", `sec`, "", 'section'));
 sec.append(gen("h1", ``, "Demo Form to test working of software", ''));
-sec.append(gen("p", ``, "The data is not saved anywhere", ''));
+sec.append(gen("p", ``, "The data is not saved.", ''));
 
 for (var i = 0; i < formfields.length; i++) {
     var heading = formfields[i].heading;

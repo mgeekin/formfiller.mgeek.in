@@ -13,6 +13,13 @@
     // margin-left: 0px;
     // margin-right: 0px;
     // text-align: right;
+    text-transform: capitalize;
+}
+
+thead {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
 }
 
 #resetAll {

@@ -25,8 +25,6 @@
 
 #chat {
     margin-top: 100px;
-    margin-left: 15%;
-    margin-right: 15%;
     background: hsla(125, 100%, 70%, 0);
 
     .chatbubble {
@@ -34,11 +32,34 @@
         padding: 20px 40px;
         box-shadow: rgb(212, 212, 238) 2px 2px 2px;
         border-radius: 20px;
-        margin: 20px;
+
     }
 }
 
+@media screen and (min-width: 600px) {
+    #chat {
+        margin-left: 0%;
+        margin-right: 0%;
 
+        .chatbubble {
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #chat {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin: 20px;
+
+        .chatbubble {
+            margin: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
 
 
 #contact {
