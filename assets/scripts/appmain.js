@@ -11,6 +11,7 @@ const tbody = 'tbody';
 const tr = 'tr';
 const td = 'td';
 const button = 'button';
+const a = 'a';
 
 
 function gen(elementtype, idin, htmlin, classin) {

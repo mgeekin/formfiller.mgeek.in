@@ -6,10 +6,16 @@ function loadHeader() {
     sitelogo.src = "/assets/img/logo.png";
     sitelogo.alt = "";
 
-    siteheading.append(gen("span", "sitetitle", "Form Helper"));
+    siteheading.append(gen("span", "sitetitle", gen(a, 'homelink', "Form Helper")));
+    homelink.href = 'https://formhelper.mgeek.in';
     siteheading.append(gen("span", "sitesubtitle", "Automation tool for filling forms and data entry"));
 
-    navLinksObj = [['Home', '/'], ['Download', '/#download'], ["Demo Form", "/demoform"], ["Author", "/author"], ["Contact", "/author/#contact"]];
+    navLinksObj = [
+        ['Download', '/#download'],
+        ["Demo Form", "/demoform"],
+        ["Author", "/author"],
+        ["Contact", "/author/#contact"]
+    ];
 
     document.getElementById("header").append(gen("nav", 'nav', gen("ul", 'navul')));
     nav.append(gen('input', "navmenu", "check"));
