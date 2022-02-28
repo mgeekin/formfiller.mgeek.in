@@ -11,16 +11,7 @@ const tbody = 'tbody';
 const tr = 'tr';
 const td = 'td';
 const button = 'button';
-function LoadHTML() {
-    var script = document.createElement("script");  // create a script DOM node
-    script.src = "https://unpkg.com/htmx.org@1.7.0";  // set its src to the provided URL
-    // script.crossorigin = "anonymous";
-    // script.integrity = "sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo";
-    document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
 
-}
-// dynamicallyLoadScript(HTMXURL);
-LoadHTML()
 
 function gen(elementtype, idin, htmlin, classin) {
     var element = document.createElement(elementtype);
@@ -47,25 +38,53 @@ function gen(elementtype, idin, htmlin, classin) {
     }
 
     if (classin != undefined && classin != "") {
-        element.classList.add(classin);
+        // element.classList.add(classin);
+        element.classList += classin.replace(',', ' ').replace(', ', ' ');
     }
     return element;
 };
 
+function loadApp() {
+
+    const appmain = document.getElementById('app');
+
+    const header = gen(div, "header");
+    const main = gen(div, "main", "", "maincontainer");
+    const footer = gen(div, "footer");
+    appmain.innerHTML = "";
+    header.innerHTML = "";
+    main.innerHTML = "";
+    footer.innerHTML = "";
+    appmain.append(header, main, footer);
+    // loadHeader();
+    // loadFooter();
+}
+loadApp()
+ListOfScripts = [
+    `/assets/scripts/header.js`,
+    `/assets/scripts/footer.js`,
+    `https://unpkg.com/htmx.org@1.7.0`,
+    `https://cdn.tailwindcss.com`,
+]
+
+function LoadScripts(srcList) {
+    for (i = 0; i < srcList.length; i++) {
+        var s = document.createElement("script");  // create a script DOM node
+        s.type = 'text/javascript'
+        s.src = srcList[i];  // set its src to the provided URL
+
+        // script.crossorigin = "anonymous";
+        // script.integrity = "sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo";
+        document.head.appendChild(s);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+    }
+
+}
+// dynamicallyLoadScript(HTMXURL);
+LoadScripts(ListOfScripts);
 
 /* document.body.innerHTML = '';
 document.body.append(gen(div, "app", "", "app")); */
 
-const appmain = document.getElementById('app');
-
-const header = gen(div, "header");
-const main = gen(div, "main", "", "container");
-const footer = gen(div, "footer");
-appmain.innerHTML = "";
-header.innerHTML = "";
-main.innerHTML = "";
-footer.innerHTML = "";
-appmain.append(header, main, footer);
 
 
 
