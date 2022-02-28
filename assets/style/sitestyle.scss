@@ -74,24 +74,6 @@ table {
     background: #BBC;
 }
 
-
-
-#screenshotScroll {
-    display: flex;
-    width: 100%;
-}
-
-.screenshotdiv {
-    width: 100%;
-}
-
-.screenshotimg {
-    border-radius: 5px;
-    ;
-    margin: 5px;
-    box-shadow: 2px 2px 2px white;
-}
-
 video {
     width: 100%;
     margin: 10px;
@@ -99,27 +81,6 @@ video {
     box-shadow: 2px 2px 2px white;
     margin-bottom: 10%;
 
-}
-
-.screehshotimg {
-    width: 100%;
-    padding: 10px;
-    position: relative;
-    transition: width .5s ease-in-out .5s;
-    transition: position .5s ease-in-out .5s;
-
-
-}
-
-.screehshotimg:hover {
-    width: 70%;
-    left: 5%;
-    right: 5%;
-    padding: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    z-index: 2;
-    position: absolute;
 }
 
 

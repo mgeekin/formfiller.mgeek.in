@@ -1,1 +1,37 @@
-/* No CSS *//*# sourceMappingURL=pagestyle.css.map */
+#screenshotScroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.screenshotdiv {
+  width: 100%;
+}
+
+.screenshotimg {
+  border-radius: 5px;
+  margin: 5px;
+  -webkit-box-shadow: 2px 2px 2px white;
+          box-shadow: 2px 2px 2px white;
+}
+
+.screehshotimg {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  -webkit-transition: position .5s ease-in-out .5s;
+  transition: position .5s ease-in-out .5s;
+}
+
+.screehshotimg:hover {
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 2;
+  position: absolute;
+}
+/*# sourceMappingURL=pagestyle.css.map */

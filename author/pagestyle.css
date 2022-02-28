@@ -33,22 +33,22 @@
   border-radius: 20px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 800px) {
   #chat {
     margin-left: 0%;
     margin-right: 0%;
+    padding: 10px;
   }
   #chat .chatbubble {
     margin: 0px;
     margin-bottom: 20px;
+    padding: 10px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 800px) {
   #chat {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin: 20px;
+    width: 600px;
   }
   #chat .chatbubble {
     margin: 20px;

@@ -5,7 +5,7 @@ M = ['Well, I was annoyed by the repeated task of filling web forms and I search
     might be useful for others and save their time.',
     'Hi! I am <b>Dr. Prateek Raj Gautam</b>.',
     'I have earned my <b>Ph.D.</b> in 2021 from <b>Motilal Nehru National Institute of Technology at\
-    Allahabad</b>,\
+    Allahabad</b>, \
 Prayagraj, India. under the supervision of <b>Dr. Arvind Kumar</b> (Associate Professor ECED,\
 MNNIT)\
 on the topic "<b><i>Energy-Efficient 2D and 3D Localization in Wireless Sensor Networks using Single Anchor\

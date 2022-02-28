@@ -63,8 +63,9 @@ loadApp()
 ListOfScripts = [
     `/assets/scripts/header.js`,
     `/assets/scripts/footer.js`,
+    `./script.js`,
     `https://unpkg.com/htmx.org@1.7.0`,
-    `https://cdn.tailwindcss.com`,
+    // `https://cdn.tailwindcss.com`,
 ]
 
 function LoadScripts(srcList) {
@@ -82,28 +83,28 @@ function LoadScripts(srcList) {
 // dynamicallyLoadScript(HTMXURL);
 LoadScripts(ListOfScripts);
 
-/* document.body.innerHTML = '';
-document.body.append(gen(div, "app", "", "app")); */
 
 
 
+//Load Styles
 
+ListOfStyles = [
+    `./assets/styles/tailwinds.css`,
+    `/assets/styles/sitestyle.css`,
+    `./pagestyle.css`
+]
 
+function LoadStyles(srcList) {
+    for (i = 0; i < srcList.length; i++) {
+        var s = document.createElement("link");  // create a script DOM node
+        s.rel = 'stylesheet';
+        // s.type = 'text/javascript';
+        s.href = srcList[i];  // set its src to the provided URL
 
-
-// const HTMXURL = `https://unpkg.com/htmx.org@1.7.0`;
-// const THMXSecureURL = `    <script src="https://unpkg.com/htmx.org@1.7.0" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" ></script>`;
-
-
-
-/* main.innerHTML = `<button hx-get="/author/"
-hx-trigger="click"
-hx-target="#main"
-hx-swap="outerHTML">
-Click Me!
-</button>`; */
-
-/* main.append(gen(div, "", gen(button, 'htmxbtn', 'author')));
-htmxbtn.setAttribute('hx-post', '/author/');
-htmxbtn.setAttribute('hx-swap', 'outerHTML');
-// htmxbtn.`hx-swap` = "outerHTML"; */
+        // script.crossorigin = "anonymous";
+        // script.integrity = "sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo";
+        document.head.appendChild(s);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+    }
+}
+// dynamicallyLoadScript(HTMXURL);
+LoadStyles(ListOfStyles);

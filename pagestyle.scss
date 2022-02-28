@@ -1,0 +1,36 @@
+#screenshotScroll {
+    display: flex;
+    width: 100%;
+}
+
+.screenshotdiv {
+    width: 100%;
+}
+
+.screenshotimg {
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 2px white;
+}
+
+
+
+.screehshotimg {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    transition: position .5s ease-in-out .5s;
+
+
+}
+
+.screehshotimg:hover {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 2;
+    position: absolute;
+}
