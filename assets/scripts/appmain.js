@@ -90,7 +90,7 @@ LoadScripts(ListOfScripts);
 
 ListOfStyles = [
     `./assets/styles/tailwinds.css`,
-    `/assets/styles/sitestyle.css`,
+    `/assets/style/sitestyle.css`,
     `./pagestyle.css`
 ]
 
