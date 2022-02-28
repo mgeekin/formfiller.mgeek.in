@@ -1,3 +1,24 @@
+ListOfStyles = [
+    `./assets/styles/tailwinds.css`,
+    `/assets/style/sitestyle.css`,
+    `./pagestyle.css`
+]
+
+function LoadStyles(srcList) {
+    for (i = 0; i < srcList.length; i++) {
+        var s = document.createElement("link");  // create a script DOM node
+        s.rel = 'stylesheet';
+        // s.type = 'text/javascript';
+        s.href = srcList[i];  // set its src to the provided URL
+
+        // script.crossorigin = "anonymous";
+        // script.integrity = "sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo";
+        document.head.appendChild(s);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+    }
+}
+// dynamicallyLoadScript(HTMXURL);
+LoadStyles(ListOfStyles);
+
 const div = 'div';
 const p = 'p';
 const span = 'span';
@@ -89,23 +110,3 @@ LoadScripts(ListOfScripts);
 
 //Load Styles
 
-ListOfStyles = [
-    `./assets/styles/tailwinds.css`,
-    `/assets/style/sitestyle.css`,
-    `./pagestyle.css`
-]
-
-function LoadStyles(srcList) {
-    for (i = 0; i < srcList.length; i++) {
-        var s = document.createElement("link");  // create a script DOM node
-        s.rel = 'stylesheet';
-        // s.type = 'text/javascript';
-        s.href = srcList[i];  // set its src to the provided URL
-
-        // script.crossorigin = "anonymous";
-        // script.integrity = "sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo";
-        document.head.appendChild(s);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
-    }
-}
-// dynamicallyLoadScript(HTMXURL);
-LoadStyles(ListOfStyles);
