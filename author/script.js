@@ -36,16 +36,18 @@ on the topic "<b><i>Energy-Efficient 2D and 3D Localization in Wireless Sensor N
 
 
 for (i = 0; i < M.length; i++) {
+    // setInterval(() => {
     addChatMessages(chat, M[i], i);
+    // }, 5000);
 };
 
-async function addChatMessages(chat, Mi, i) {
+function addChatMessages(chat, Mi, i) {
     console.log(Mi);
     setTimeout(() => {
         chat.append(gen('p', `p${i}`, "", 'chatbubble'));
         document.getElementById(`p${i}`).append(gen("span", "user", ""));
         document.getElementById(`p${i}`).append(gen("span", "message", Mi));
-    }, 1000);
+    }, 2000);
 
 }
 

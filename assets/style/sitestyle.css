@@ -19,11 +19,14 @@
   list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 :root {
   font-size: 1rem;
   font-family: "Roboto Mono", "Play", "Exo", "Verdana";
+  text-shadow: 0.01em 0.01em 0.1em #292929;
 }
 
 body {
@@ -38,26 +41,27 @@ a {
 
 button,
 .button {
+  position: relative;
+  font-weight: 500;
   display: inline-block;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 5px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #006a94), to(#5e5f9c)) no-repeat scroll 0;
-  background: linear-gradient(0deg, #006a94 80%, #5e5f9c 100%) no-repeat scroll 0;
-  color: #fff;
+  outline: 0.2em solid #05eeff;
+  padding: .5em;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #0af7ff), color-stop(80%, #75faff), to(#0af7ff)) no-repeat scroll 0;
+  background: linear-gradient(0deg, #0af7ff 10%, #75faff 80%, #0af7ff 100%) no-repeat scroll 0;
+  color: #0b4c65;
   text-align: center;
-  margin: 10px;
-  -webkit-box-shadow: 1px 1px 1px #15a4f7;
-          box-shadow: 1px 1px 1px #15a4f7;
+  text-shadow: none;
+  margin: 2em;
+  margin-left: 0;
   text-transform: capitalize;
+  border-radius: .01em;
 }
 
 button:hover,
 .button:hover {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 2px 2px 2px #00a2ff;
-          box-shadow: 2px 2px 2px #00a2ff;
-  margin: 9px;
+  outline: 0.1em solid #05eeff;
+  -webkit-box-shadow: 0px 0px 0.5em #05eeff;
+          box-shadow: 0px 0px 0.5em #05eeff;
 }
 
 h1 {
@@ -80,8 +84,56 @@ p {
 }
 
 .section {
-  margin-top: 15%;
-  padding: 5%;
+  margin-top: 5em;
+  padding: 10em;
+  margin-bottom: 5em;
+}
+
+table {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px #999;
+          box-shadow: 1px 1px 3px #999;
+  margin: 20px;
+  width: 100%;
+}
+
+table thead {
+  padding: 2px;
+}
+
+table tbody tr {
+  padding: 2px;
+}
+
+table tbody tr:nth-child(odd) {
+  background: rgba(1, 1, 1, 0.5);
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(236, 236, 236, 0.2);
+}
+
+table tbody tr td {
+  width: 70%;
+}
+
+table tbody tr td:nth-child(1) {
+  width: 150px;
+}
+
+.input {
+  margin: 2px;
+  width: 100%;
+  background: #BBC;
+}
+
+video {
+  width: 100%;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px white;
+          box-shadow: 2px 2px 2px white;
+  margin-bottom: 10%;
 }
 
 #app {
@@ -109,18 +161,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.maincontainer {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-@media screen and (max-width: 600px) {
-  .maincontainer {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
 }
 
 #header {
@@ -411,53 +451,6 @@ p {
   color: white;
   font-size: 2rem;
   text-align: left;
-}
-
-table {
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 3px #999;
-          box-shadow: 1px 1px 3px #999;
-  margin: 20px;
-  width: 100%;
-}
-
-table thead {
-  padding: 2px;
-}
-
-table tbody tr {
-  padding: 2px;
-}
-
-table tbody tr:nth-child(odd) {
-  background: rgba(1, 1, 1, 0.5);
-}
-
-table tbody tr:nth-child(even) {
-  background: rgba(236, 236, 236, 0.2);
-}
-
-table tbody tr td {
-  width: 70%;
-}
-
-table tbody tr td:nth-child(1) {
-  width: 150px;
-}
-
-.input {
-  margin: 2px;
-  width: 100%;
-  background: #BBC;
-}
-
-video {
-  width: 100%;
-  margin: 10px;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 2px white;
-          box-shadow: 2px 2px 2px white;
-  margin-bottom: 10%;
 }
 
 .ytContainer {

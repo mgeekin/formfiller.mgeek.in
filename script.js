@@ -81,10 +81,10 @@ for (i = 0; i < screenshotURL.length; i++) {
 //download
 main.append(gen("div", "download", "", "section"));
 download.append(gen("h2", "", "Download and Run"));
-download.append(gen("a", "dlbtn", "click here to start download", "button"));
+download.append(gen("a", "dlbtn", "Download", "button"));
 dlbtn.href = releaseUrl;
 dlbtn.download = "FormHelper.mgeek.in.zip"
-download.append(gen("a", "demoForm", "Demo web form to test working with app", "button"))
+download.append(gen("a", "demoForm", "Demo form", "button"))
 demoForm.href = "demoform/"
 // demoForm.style.marginLeft = "20px";
 download.append(gen("p", "", "zip file contains Demo files you can edit with your data"))
@@ -108,8 +108,8 @@ telegrampoll.append(gen("p", "poll", TPoll));
 main.append(gen("div", "feedback", "", "section"));
 feedback.append(gen("h2", "", "Feedback and Report Issue"));
 feedback.append(gen("p", '', "Plese send Feedback on Youtube and Issue on Github"));
-feedback.append(gen("a", "ytComment", "Feedback on Youtube Comments", "button"));
-feedback.append(gen("a", "gitIssue", "Create Issue on Github", "button"));
+feedback.append(gen("a", "ytComment", "Feedback", "button"));
+feedback.append(gen("a", "gitIssue", "Report Issue", "button"));
 ytComment.href = youtubeUrl;
 ytComment.target = "_blank";
 gitIssue.href = GithubIssueUrl;

@@ -24,52 +24,25 @@
 
 
 #chat {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
     background: hsla(125, 100%, 70%, 0);
+    margin: 10% auto;
+    margin-bottom: 5%;
+    padding: 1em;
+    max-width: 750px;
 
     .chatbubble {
+
+        margin: 1em;
+        // margin-top: 2em;
         background: hsla(0, 0%, 100%, 0.178);
-        padding: 20px 40px;
+        padding: 2em 2em;
         box-shadow: rgb(212, 212, 238) 2px 2px 2px;
         border-radius: 20px;
 
     }
 }
-
-//small
-@media screen and (max-width: 800px) {
-    #chat {
-        margin-left: 0%;
-        margin-right: 0%;
-        padding: 10px;
-
-        .chatbubble {
-            margin: 0px;
-            margin-bottom: 20px;
-            padding: 10px;
-            padding-bottom: 20px;
-
-            font-size: .8rem;
-            font-weight: 100;
-
-        }
-    }
-}
-
-//large
-@media screen and (min-width: 800px) {
-    #chat {
-        // margin-left: 10%;
-        width: 600px;
-        // margin: 20px;
-
-        .chatbubble {
-            margin: 20px;
-            margin-bottom: 20px;
-        }
-    }
-}
-
 
 #contact {
     color: white;

@@ -5,11 +5,13 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    transition: all 100ms ease-in-out;
 }
 
 :root {
     font-size: 1rem;
     font-family: $fontFamily;
+    text-shadow: .01em .01em .1em hsl(0, 0%, 16%);
 }
 
 body {
@@ -25,34 +27,51 @@ a {
 
 button,
 .button {
+    position: relative;
+    font-weight: 500;
     display: inline-block;
-    border-radius: 10px;
-    border: 1px solid hsla(21, 164, 244, .5);
-    padding: 5px;
+    outline: .2em solid hsl(184, 100%, 51%);
+    padding: .5em;
     background: $colorButton;
-    color: $colorButtontext;
+    color: $colorButtonText;
     text-align: center;
-    margin: 10px;
-    box-shadow: 1px 1px 1px rgb(21, 164, 247);
+    text-shadow: none;
+    margin: 2em;
+    margin-left: 0;
     text-transform: capitalize;
+    border-radius: .01em;
+
 
     &:hover {
-
-        border: 2px solid hsla(21, 164, 244, .8);
-        box-shadow: 2px 2px 2px rgb(0, 162, 255);
-
-        margin: 9px;
+        outline: 0.1em solid hsl(184, 100%, 51%);
+        box-shadow: 0px 0px .5em hsl(184, 100%, 51%);
     }
+
 }
 
 h1 {
     font-family: $fontHeading;
     margin-bottom: 1em;
+
 }
 
 h2 {
     font-family: $fontHeading;
     margin-bottom: 1em;
+
+    // &::after {
+    //     position: relative;
+    //     display: block;
+    //     content: "";
+    //     // margin: 0;
+    //     // margin-top: 15%;
+    //     padding-top: 05%;
+    //     width: 40%;
+    //     left: 0;
+    //     background-color: white;
+    //     clip-path: polygon(0 30%, 0 50%, 100% 100%);
+    // }
+
 }
 
 h3 {
@@ -70,16 +89,88 @@ p {
 }
 
 .section {
-    margin-top: 15%;
-    padding: 5%;
+    margin-top: 5em;
+    padding: 10em;
+    margin-bottom: 5em;
 
+    // &::after {
+    //     position: absolute;
+    //     content: "";
+    //     margin: 0;
+    //     margin-top: 15%;
+    //     padding-top: 15%;
+    //     width: 100%;
+    //     left: 0;
+    //     background-color: aqua;
+    //     clip-path: polygon(0 30%, 0 50%, 100% 100%);
+    // }
 }
+
 
 // .section:nth-child(even) {
 //     border-radius: 10px;
 //     background: hsla(66, 100%, 1%, .1);
 //     box-shadow: 1px 1px 10px hsla(180, 100%, 50%, 0.534);
 // }
+
+
+
+
+table {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #999;
+    margin: 20px;
+    width: 100%;
+
+    thead {
+        // background: rgba(1, 1, 1, 0.3);
+        padding: 2px;
+
+    }
+
+    tbody {
+
+
+        tr {
+            padding: 2px;
+
+            &:nth-child(odd) {
+                background: rgba(1, 1, 1, 0.5);
+            }
+
+            &:nth-child(even) {
+                background: rgba(236, 236, 236, 0.2);
+
+            }
+
+            td {
+                width: 70%;
+
+                &:nth-child(1) {
+                    width: 150px;
+                }
+            }
+
+        }
+    }
+}
+
+.input {
+    margin: 2px;
+    width: 100%;
+    background: #BBC;
+}
+
+video {
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px white;
+    margin-bottom: 10%;
+
+}
+
+
 
 #app {
     position: relative;
@@ -102,14 +193,14 @@ p {
 
 }
 
-.maincontainer {
-    padding-left: 10%;
-    padding-right: 10%;
-}
+// .maincontainer {
+//     padding-left: 10%;
+//     padding-right: 10%;
+// }
 
-@media screen and (max-width: 600px) {
-    .maincontainer {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-}
+// @media screen and (max-width: 600px) {
+//     .maincontainer {
+//         padding-left: 5px;
+//         padding-right: 5px;
+//     }
+// }
