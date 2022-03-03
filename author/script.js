@@ -1,6 +1,6 @@
 main.append(gen("div", "chat", '', 'section'));
 M = ['Well, I was annoyed by the repeated task of filling web forms and I searched for any automation solution like autofill extensions, etc.',
-    ' However. they are inefficient and do not work on restricted websites.',
+    ' However, they are inefficient and do not work on restricted websites.',
     ' Therefore I tried to automate this form filling process. ',
     'Initially, I made it for my\
     personal use.    Then, I shared it with my friends and colleagues, and they liked it. So I thought it\
@@ -9,7 +9,7 @@ M = ['Well, I was annoyed by the repeated task of filling web forms and I search
     'I have earned my <b>Ph.D.</b> in 2021 from <b>Motilal Nehru National Institute of Technology at\
     Allahabad</b>, \
 Prayagraj, India. under the supervision of <b>Dr. Arvind Kumar</b> (Associate Professor ECED,\
-MNNIT)\
+MNNIT) \
 on the topic "<b><i>Energy-Efficient 2D and 3D Localization in Wireless Sensor Networks using Single Anchor\
         Node.</i></b>"',
     'I have around <b>4 years of pre-PhD teaching experience</b> as an <b>Assistant Professor</b> at\
@@ -44,6 +44,7 @@ function addChatBubble(i) {
     if (i < M.length) {
         // setInterval(() => {
         chat.append(gen('p', `p${i}`, "", 'chatbubble'));
+
         // await addChatMessages(chat, M[i], i, 0);
         setTimeout(addChatMessages, 1000, chat, M[i], i, 0);
     };
@@ -57,14 +58,18 @@ function addChatMessages(chat, Mi, i, j) {
 
         document.getElementById(`p${i}`).append(gen("span", "user", ""));
         document.getElementById(`p${i}`).append(gen("span", `message${i}`));
+        // document.getElementById(`p${i}`).scrollIntoView(false);
+        document.getElementById(`chat`).scrollIntoView(false);
     }
     if (j <= Mi.length) {
         // document.getElementById(`message${i}`).innerHTML += Mi[j];
         document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
         j = j + 1;
+
         setTimeout(addChatMessages, 50, chat, Mi, i, j);
         if (j == Mi.length) {
             // console.log('typed');
+            document.getElementById(`chat`).scrollIntoView(false);
             i = i + 1;
             setTimeout(addChatBubble, 1000, i);
             //     j = 0;
