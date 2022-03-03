@@ -1,7 +1,9 @@
 main.append(gen("div", "chat", '', 'section'));
-M = ['Well, I was annoyed by the repeated task of filling web forms and I searched for any automation solution like autofill extensions, etc.<br /> However. they are inefficient and do not work on restricted websites.',
-    ' Therefore I tried to automate this form filling process. <br />Initially I made it for my\
-    personal use.<br />    Later, I shared it with my friends and colleagues, and they liked it. <br />So I thought it\
+M = ['Well, I was annoyed by the repeated task of filling web forms and I searched for any automation solution like autofill extensions, etc.',
+    ' However. they are inefficient and do not work on restricted websites.',
+    ' Therefore I tried to automate this form filling process. ',
+    'Initially I made it for my\
+    personal use.    Then, I shared it with my friends and colleagues, and they liked it. So I thought it\
     might be useful for others and save their time.',
     'Hi! I am <b>Dr. Prateek Raj Gautam</b>.',
     'I have earned my <b>Ph.D.</b> in 2021 from <b>Motilal Nehru National Institute of Technology at\
@@ -35,21 +37,50 @@ on the topic "<b><i>Energy-Efficient 2D and 3D Localization in Wireless Sensor N
 ];
 
 
-for (i = 0; i < M.length; i++) {
-    // setInterval(() => {
-    addChatMessages(chat, M[i], i);
-    // }, 5000);
-};
-
-function addChatMessages(chat, Mi, i) {
-    console.log(Mi);
-    setTimeout(() => {
+i = 0;
+function addChatBubble(i) {
+    console.log(`addingBubble ${i}`)
+    // console.log(i)
+    if (i < M.length) {
+        // setInterval(() => {
         chat.append(gen('p', `p${i}`, "", 'chatbubble'));
-        document.getElementById(`p${i}`).append(gen("span", "user", ""));
-        document.getElementById(`p${i}`).append(gen("span", "message", Mi));
-    }, 2000);
-
+        // await addChatMessages(chat, M[i], i, 0);
+        setTimeout(addChatMessages, 1000, chat, M[i], i, 0);
+    };
 }
+
+
+function addChatMessages(chat, Mi, i, j) {
+    // console.log(j);
+    // console.log(Mi.length);
+    if (j == 0) {
+
+        document.getElementById(`p${i}`).append(gen("span", "user", ""));
+        document.getElementById(`p${i}`).append(gen("span", `message${i}`));
+    }
+    if (j < Mi.length) {
+        // document.getElementById(`message${i}`).innerHTML += Mi[j];
+        document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
+        j = j + 1;
+        setTimeout(addChatMessages, 50, chat, Mi, i, j);
+        if (j == Mi.length) {
+            // console.log('typed');
+            i = i + 1;
+            setTimeout(addChatBubble, 1000, i);
+            //     j = 0;
+        }
+    }
+
+    // return j;
+}
+
+
+
+
+
+
+setTimeout(addChatBubble, 2000, 0);
+
 
 
 var contact = `                <p>
