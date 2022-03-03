@@ -79,7 +79,7 @@ function addChatMessages(chat, Mi, i, j) {
 
 
 
-setTimeout(addChatBubble, 2000, 0);
+setTimeout(addChatBubble, 500, 0);
 
 
 
@@ -124,3 +124,5 @@ var contact = `                <p>
 </p>`;
 
 main.append(gen("div", "contact", contact, 'section'));
+
+//with typing chat animation
