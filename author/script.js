@@ -28,7 +28,7 @@ on the topic "<b><i>Energy-Efficient 2D and 3D Localization in Wireless Sensor N
     Suite,    LTspice.</b>',
     'I have sound skills at producing high-quality documents and illustrations in\
     <b>LaTeX/Tikz</b> and\
-    2d and 3d drawing and animation software like <b>Inkscape, GIMP, and Blender</b>.',
+    2d and 3d drawing and animation software like <b>Inkscape, GIMP, and Blender</b>. </br> I have strong interest in Web development with technologies like <b>HTML, CSS, JS, Wordpress, Django, jekyll</b>',
     'I would like expand my research in the field of wireless networks and their application.\
     <i>Currently, I\
         am exploring optimization and machine learning and its applications in Wireless Sensor\
@@ -58,7 +58,7 @@ function addChatMessages(chat, Mi, i, j) {
         document.getElementById(`p${i}`).append(gen("span", "user", ""));
         document.getElementById(`p${i}`).append(gen("span", `message${i}`));
     }
-    if (j < Mi.length) {
+    if (j <= Mi.length) {
         // document.getElementById(`message${i}`).innerHTML += Mi[j];
         document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
         j = j + 1;

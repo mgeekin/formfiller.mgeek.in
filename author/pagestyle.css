@@ -38,10 +38,10 @@
 #chat .chatbubble {
   margin: 1em;
   background: rgba(255, 255, 255, 0.178);
-  padding: 2em 2em;
+  padding: 1em 2em;
   -webkit-box-shadow: #d4d4ee 2px 2px 2px;
           box-shadow: #d4d4ee 2px 2px 2px;
-  border-radius: 20px;
+  border-radius: .5em;
 }
 
 #contact {
