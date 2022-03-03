@@ -2,7 +2,7 @@ main.append(gen("div", "chat", '', 'section'));
 M = ['Well, I was annoyed by the repeated task of filling web forms and I searched for any automation solution like autofill extensions, etc.',
     ' However. they are inefficient and do not work on restricted websites.',
     ' Therefore I tried to automate this form filling process. ',
-    'Initially I made it for my\
+    'Initially, I made it for my\
     personal use.    Then, I shared it with my friends and colleagues, and they liked it. So I thought it\
     might be useful for others and save their time.',
     'Hi! I am <b>Dr. Prateek Raj Gautam</b>.',
