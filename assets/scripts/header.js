@@ -4,6 +4,7 @@ function loadHeader() {
     title.append(gen("span", "logo", gen("img", 'sitelogo')));
     title.append(gen("span", "siteheading"));
     sitelogo.src = "/assets/img/logo.png";
+    sitelogo.width = 30;
     sitelogo.alt = "";
 
     siteheading.append(gen("span", "sitetitle", gen(a, 'homelink', "Form Helper")));
@@ -23,19 +24,19 @@ function loadHeader() {
     // navmenu.checked = true;
     document.getElementById('navmenu').addEventListener("click", () => {
 
-        console.log('click');
+        // console.log('click');
         var a = document.getElementById('navmenu');
         var b = document.getElementById('navul');
-        console.log(a)
+        // console.log(a)
         if (a.checked == true) {
-            console.log(b)
+            // console.log(b)
             b.style.display = 'flex';
-            console.log(b.style)
+            // console.log(b.style)
         } if (navmenu.checked == false) {
-            console.log(b)
+            // console.log(b)
             b.style.display = 'none';
 
-            console.log(b.style)
+            // console.log(b.style)
         }
     });
 
@@ -45,9 +46,9 @@ function loadHeader() {
     // navmenulabel.attribute.for = "hi";
     // navicon.for = "navmenu";
     for (i = 0; i < navLinksObj.length; i++) {
-        console.log(i);
+        // console.log(i);
         var navRow = navLinksObj[i];
-        console.log(navRow[0]);
+        // console.log(navRow[0]);
         // navlist.append("navRow[0]");
         navul.append(gen('li', `navli${i}`, gen("a", `navlia${i}`, `${navRow[0]}`)));
         document.getElementById(`navlia${i}`).href = navRow[1];
@@ -61,12 +62,12 @@ function loadHeader() {
         // navmenu.checked = !navmenu.checked;
         var a = document.getElementById('navmenu');
         var b = document.getElementById('navul');
-        console.log(a)
+        // console.log(a)
         if (a.checked == true) {
             navmenu.checked = !navmenu.checked;
-            console.log(b)
+            // console.log(b)
             b.style.display = 'none';
-            console.log(b.style)
+            // console.log(b.style)
         }
     })
 
@@ -75,12 +76,12 @@ function loadHeader() {
         // navmenu.checked = !navmenu.checked;
         var a = document.getElementById('navmenu');
         var b = document.getElementById('navul');
-        console.log(a)
+        // console.log(a)
         if (a.checked == true) {
             navmenu.checked = !navmenu.checked;
-            console.log(b)
+            // console.log(b)
             b.style.display = 'none';
-            console.log(b.style)
+            // console.log(b.style)
         }
     })
 };

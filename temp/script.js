@@ -1,5 +1,5 @@
 
-t1 = window.setTimeout(function () {
+/* t1 = window.setTimeout(function () {
     var redirectUrl = "https://www.researchgate.net/profile/Prateek-Raj-Gautam";
     //var redirectUrl = "https://formhelper.mgeek.in";
     //window.location.href = redirectUrl;
@@ -173,4 +173,15 @@ ytcode.innerHTML = youtubeCode;
 
 
 
+ */
 
+main.append(gen(div, "", gen(p, 'pAnimate'), 'section'));
+var text = ['this is some text loremsadfsdfdsfsadlfkjsdlfkjsa;dflkj sadflkj sldkfj sdfjlk.']
+// pAnimate.innerHTML = "hello";
+
+
+// var resp = typeAnimate(element, testStr);
+// var resp = typeAnimate(element, testStr, delay);
+var res = typeAnimate(pAnimate, text[0]);
+main.append(gen(div, 'newblock'))
+typeAnimate(newblock, 'asdfkj safkjasdfladfskj ');
