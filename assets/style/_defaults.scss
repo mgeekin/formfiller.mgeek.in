@@ -48,6 +48,29 @@ button,
         box-shadow: 0px 0px .5em hsl(184, 100%, 51%);
     }
 
+
+
+}
+
+.button-blank {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    outline: .2em solid hsl(184, 100%, 51%);
+    padding: .5em;
+    background: rgba(1, 1, 1, 0.1);
+    color: hsl(184, 100%, 51%);
+    text-align: center;
+    text-shadow: none;
+    margin: 2em;
+    margin-left: 0;
+    text-transform: capitalize;
+    border-radius: .01em;
+
+    &:hover {
+        outline: 0.1em solid hsl(184, 100%, 51%);
+        box-shadow: 0px 0px .5em hsl(184, 100%, 51%);
+    }
 }
 
 h1 {

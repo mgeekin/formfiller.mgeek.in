@@ -34,24 +34,27 @@ for (i = 0; i < og.length; i++) {
     document.getElementById(`${metaid}`).property = `og:${og[i][0]}`;
     document.getElementById(`${metaid}`).content = `${og[i][1]}`;
 }
+main.append(gen("div", "hero", gen("h1", "", "Speed up data entry and form filling process"), "section"))
+hero.append(gen(p, '', 'One click to type one entry.<br /> Reuse your data stored in spreadsheet.<br/> Save your time and be productive.'))
+hero.append(gen(span, 'getButton', 'Get form helper', 'button'))
+getButton.addEventListener('click', () => { download.scrollIntoView({ block: 'center', behavior: 'smooth' }) })
+
+hero.append(gen(span, 'YTButton', 'How To Use', 'button-blank'))
+YTButton.addEventListener('click', () => { howToUse.scrollIntoView({ block: 'center', behavior: 'smooth' }) })
 
 
-//instructions
-main.append(gen("div", "instructions", gen("h2", "", "How to use"), "section"))
-instructions.append(gen("ol", "InstList"));
-list = [
-    "Open your form where data needs to be filled.",
-    "Press the align button to move form window and formhelper in side by side.",
-    "Load your data file (*.xlsx).",
-    "Select the type area of form then click on button to fill it with data.",
-    "<i>Your data is not stored anywhere.</i>",
-    '<i>* App requires internet to check licence information at the start and when using "Download BiBTeX from DOI" function.</i>',
-]
-for (i = 0; i < list.length; i++) {
-    // InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`, 'p2'));
-    InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
-    typeAnimate(`instulli${i}`, `${list[i]}`)
-}
+
+
+
+
+
+
+
+
+
+
+
+
 //screenshot
 main.append(gen("div", "screenshots", gen("h2", "", "Screenshots"), "section"))
 //GIF
@@ -95,8 +98,51 @@ demoForm.href = "demoform/"
 download.append(gen("p", "", "zip file contains Demo files you can edit with your data"))
 
 
+
+//How to Use
+//instructions
+
+main.append(gen("div", "howblock", gen(h2, '', "How to use")))
+howblock.append(gen("div", "howToUse"));
+howToUse.append(gen("div", "instructions", gen("h3", "", "Steps")))
+// howToUse.style.display = 'flex';
+// howToUse.style.flex-direction
+instructions.append(gen("ol", "InstList"));
+list = [
+    "Open your form where data needs to be filled.",
+    "Press the align button to move form window and formhelper in side by side.",
+    "Load your data file (*.xlsx).",
+    "Select the type area of form then click on button to fill it with data.",
+    "<i>Your data is not stored anywhere.</i>",
+    '<i>* App requires internet to check licence information at the start and when using "Download BiBTeX from DOI" function.</i>',
+]
+
+
+// for (i = 0; i < list.length; i++) {
+//     // InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`, 'p2'));
+//     InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
+//     typeAnimate(`instulli${i}`, `${list[i]}`)
+// }
+
+i = 0
+function* typ() {
+    while (true) {
+        InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
+        typeAnimate(`instulli${i}`, `${list[i]}`)
+        // i = i + 1
+        yield i
+    }
+}
+let A = typ()
+for (i = 0; i < list.length; i++) {
+    A.next();
+}
+
+
+
+
 //youtube
-main.append(gen("div", "yt", gen("h2", "", "Video Tutorial on YouTube"), "section"))
+howToUse.append(gen("div", "yt", gen("h3", "", "Video Tutorial on YouTube")))
 yt.append(gen("ytcode", "ytcode"));
 ytcode.innerHTML = youtubeCode;
 //yt.append(gen("ytcode", "ytcomment"));

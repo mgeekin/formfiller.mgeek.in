@@ -64,6 +64,28 @@ button:hover,
           box-shadow: 0px 0px 0.5em #05eeff;
 }
 
+.button-blank {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  outline: 0.2em solid #05eeff;
+  padding: .5em;
+  background: rgba(1, 1, 1, 0.1);
+  color: #05eeff;
+  text-align: center;
+  text-shadow: none;
+  margin: 2em;
+  margin-left: 0;
+  text-transform: capitalize;
+  border-radius: .01em;
+}
+
+.button-blank:hover {
+  outline: 0.1em solid #05eeff;
+  -webkit-box-shadow: 0px 0px 0.5em #05eeff;
+          box-shadow: 0px 0px 0.5em #05eeff;
+}
+
 h1 {
   font-family: "Inter", "Play", "Verdana";
   margin-bottom: 1em;

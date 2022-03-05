@@ -132,9 +132,10 @@ async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
         state = 'typed';
         cursor.remove();
         cursor.style.display = 'none'
+        return state;
     }
     // console.log(state);
-    return state;
+    // return state;
 }
 
 
