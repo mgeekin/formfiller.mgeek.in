@@ -82,12 +82,13 @@
 
 
 #mailform {
-    max-width: 750px;
     display: flex;
-    // align-items: flex-start;
-    justify-content: space-between;
-    padding-left: 4em;
-    align-self: flex-end;
+    background: hsla(125, 100%, 70%, 0);
+    margin: 10% auto;
+    margin-bottom: 5%;
+    padding: 2em;
+    max-width: 750px;
+    align-items: flex-start;
 
     #chatinput {
         // float: right;

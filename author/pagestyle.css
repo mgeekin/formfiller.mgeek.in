@@ -80,16 +80,17 @@
 }
 
 #mailform {
-  max-width: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 4em;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  background: rgba(102, 255, 115, 0);
+  margin: 10% auto;
+  margin-bottom: 5%;
+  padding: 2em;
+  max-width: 750px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #mailform #chatinput {
