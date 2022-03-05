@@ -1,4 +1,34 @@
-main.append(gen("div", "chat", '', 'section'));
+main.append(gen("div", "chatwindow", gen(div, 'chat'), 'section'));
+
+chatwindow.append(gen(div, 'mailform', gen(textarea, 'chatinput')));
+chatinput.focus;
+chatinput.setActive;
+chatinput.select();
+// chatinput.type = 'textarea';
+chatinput.cols = 25;
+chatinput.rows = 7;
+
+
+mailform.append(gen(button, 'sendbutton', 'send'))
+sendbutton.addEventListener('click', sendEmailFunction)
+
+function sendEmailFunction() {
+    var userMessage = chatinput.value;
+    var email = gen(a, email);
+    email.href = `mailto:formhelper@mgeek.in?body=${userMessage}&subject=Formhelper Author Page`;
+    email.click();
+}
+// sendbutton.style.background = '#fff'
+// chatinput.style.float = 'right'
+// chatinput.style.width = '40em'
+// chatinput.style.height = '5em'
+
+// mailform.style.display = 'flex';
+// chatinput.style.width = '100%';
+// mailform.append(gen(button, 'mailbutton', 'Send Email'));
+
+
+
 M = [
     'Well, I was annoyed by the repeated task of filling web forms, so, I try different automation solution like autofill or form filling, browser extensions, etc.<br/>However, they are inefficient and do not work on restricted websites.',
     ' Therefore, I tried to automate this form filling process. ',
@@ -54,7 +84,7 @@ function addChatMessages(chat, Mi, i, j) {
         document.getElementById(`p${i}`).append(gen("span", "user", ""));
         document.getElementById(`p${i}`).append(gen("span", `message${i}`));
         // document.getElementById(`p${i}`).scrollIntoView(false);
-        document.getElementById(`chat`).scrollIntoView(false);
+        // document.getElementById(`chat`).scrollIntoView(false);
     }
     if (j <= Mi.length) {
         document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
@@ -64,13 +94,14 @@ function addChatMessages(chat, Mi, i, j) {
         }
         // cursor.remove();
         j = j + 1;
-        setTimeout(addChatMessages, 50, chat, Mi, i, j);
+        setTimeout(addChatMessages, 10, chat, Mi, i, j);
         if (j == Mi.length) {
-            document.getElementById(`chat`).scrollIntoView(false);
+            // document.getElementById(`chat`).scrollIntoView(false);
+            sendbutton.scrollIntoView(false);
             // cursor.remove();
             cursor.style.display = 'none';
             i = i + 1;
-            setTimeout(addChatBubble, 1000, i);
+            setTimeout(addChatBubble, 50, i);
         }
     }
 }
@@ -80,10 +111,7 @@ setTimeout(addChatBubble, 500, 0);
 
 
 
-
-
-
-
+// flex-grow: 0;
 var contact = `                <p>
 <h1 id='contact'>Contact</h1>
 <h2>
@@ -124,6 +152,4 @@ var contact = `                <p>
 </ul>
 </p>`;
 
-main.append(gen("div", "contact", contact, 'section'));
-
-//with typing chat animation
+main.append(gen("div", "contact", contact, ''));

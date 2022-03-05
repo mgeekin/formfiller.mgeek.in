@@ -31,6 +31,7 @@
     margin-bottom: 5%;
     padding: 1em;
     max-width: 750px;
+    align-items: flex-start;
 
     .chatbubble {
         margin: 1em;
@@ -75,5 +76,41 @@
             }
 
         }
+    }
+}
+
+
+
+#mailform {
+    max-width: 750px;
+    display: flex;
+    // align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 4em;
+    align-self: flex-end;
+
+    #chatinput {
+        // float: right;
+        // width: 30em;
+        height: 5em;
+        scroll-behavior: auto;
+        border-radius: 1em;
+        color: black;
+        font-size: 1.2rem;
+        flex-grow: .8;
+        padding: .5em;
+
+
+    }
+
+    #sendbutton {
+        align-self: end;
+        padding: .5em;
+        background: #0c99b367;
+        color: white;
+        border-radius: 1em;
+        // height: 3em;
+        width: 6em;
+        margin-left: 2em;
     }
 }

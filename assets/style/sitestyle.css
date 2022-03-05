@@ -1,5 +1,5 @@
 /* Fonts and Variables */
-@import url("https://fonts.googleapis.com/css?family=Exo|Play|Roboto+Mono|Unica+One");
+@import url("https://fonts.googleapis.com/css?family=Inter|Exo|Play|Roboto+Mono|Unica+One");
 .gold {
   /* Set the background color */
   background: #918c00;
@@ -21,18 +21,18 @@
           box-sizing: border-box;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
+  color: #EEF;
 }
 
 :root {
   font-size: 1rem;
-  font-family: "Roboto Mono", "Play", "Exo", "Verdana";
+  font-family: "Exo", "Verdana";
   text-shadow: 0.01em 0.01em 0.1em #292929;
 }
 
 body {
   width: 100%;
   background: #050729;
-  color: #EEF;
 }
 
 a {
@@ -65,18 +65,18 @@ button:hover,
 }
 
 h1 {
-  font-family: "Exo", "Verdana";
+  font-family: "Inter", "Play", "Verdana";
   margin-bottom: 1em;
 }
 
 h2 {
-  font-family: "Exo", "Verdana";
+  font-family: "Inter", "Play", "Verdana";
   margin-bottom: 1em;
 }
 
 h3 {
   margin-bottom: 1em;
-  font-family: "Exo", "Verdana";
+  font-family: "Inter", "Play", "Verdana";
 }
 
 p {
@@ -151,9 +151,9 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -171,6 +171,43 @@ video {
   margin-bottom: 5em;
   padding-top: 10em;
   padding-bottom: 10em;
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+ol li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+
+ol li:before {
+  margin-right: 10px;
+  content: counter(item);
+  background: #0047a3;
+  border-radius: 100%;
+  color: white;
+  padding: .2em;
+  margin: .3em;
+  width: 1.2em;
+  text-align: center;
+  display: inline-block;
+}
+
+.m1 {
+  margin: 1em;
+  margin-left: 2em;
+}
+
+.p1 {
+  padding-bottom: .5em;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
 }
 
 #header {

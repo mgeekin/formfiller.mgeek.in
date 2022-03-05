@@ -1,12 +1,11 @@
 /* Fonts and Variables */
-@import url("https://fonts.googleapis.com/css?family=Exo|Play|Roboto+Mono|Unica+One");
+@import url("https://fonts.googleapis.com/css?family=Inter|Exo|Play|Roboto+Mono|Unica+One");
 $colorBG:linear-gradient(-30deg, hsl(237, 79%, 9%) 70%, hsl(207, 78%, 34%) 200%) no-repeat scroll 0 !default;
 $color:#EEF !default;
-$fontFamily:"Roboto Mono",
-"Play",
-"Exo",
+$fontFamily: "Exo",
 'Verdana' !default;
-$fontHeading:"Exo",
+$fontHeading:'Inter',
+"Play",
 'Verdana';
 $colorButton:linear-gradient(0deg, hsl(182, 100%, 52%) 10%, hsl(182, 100%, 73%) 80%, hsl(182, 100%, 52%) 100%) no-repeat scroll 0 !default;
 $colorButtonText:hsl(197, 80%, 22%);

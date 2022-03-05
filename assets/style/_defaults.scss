@@ -6,6 +6,7 @@
     list-style: none;
     box-sizing: border-box;
     transition: all 100ms ease-in-out;
+    color: $color;
 }
 
 :root {
@@ -17,7 +18,7 @@
 body {
     width: 100%;
     background: $colorBody;
-    color: $color;
+
 }
 
 
@@ -164,7 +165,7 @@ video {
         position: relative;
         background: $colorBG;
         display: flex;
-        align-items: center;
+        align-items: left;
         flex-direction: column;
 
     }
@@ -182,4 +183,53 @@ video {
     margin-bottom: 5em;
     padding-top: 10em;
     padding-bottom: 10em;
+}
+
+
+
+ol {
+    list-style: none;
+    counter-reset: item;
+
+    li {
+        counter-increment: item;
+        margin-bottom: 5px;
+
+        &:before {
+            margin-right: 10px;
+            content: counter(item);
+            background: rgb(0, 71, 163);
+            border-radius: 100%;
+            color: white;
+            padding: .2em;
+            margin: .3em;
+            width: 1.2em;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}
+
+.m {
+    &1 {
+        margin: 1em;
+        margin-left: 2em;
+    }
+}
+
+.p {
+    &1 {
+        padding-bottom: .5em;
+    }
+
+    &t {}
+
+    &b {}
+
+    &l {}
+}
+
+svg {
+    width: 100px;
+    height: 100px;
 }

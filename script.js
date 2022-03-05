@@ -38,17 +38,19 @@ for (i = 0; i < og.length; i++) {
 
 //instructions
 main.append(gen("div", "instructions", gen("h2", "", "How to use"), "section"))
-instructions.append(gen("ul", "InstList"));
+instructions.append(gen("ol", "InstList"));
 list = [
     "Open your form where data needs to be filled.",
     "Press the align button to move form window and formhelper in side by side.",
     "Load your data file (*.xlsx).",
     "Select the type area of form then click on button to fill it with data.",
-    "Your data is not stored anywhere.",
-    '* App requires internet to check licence information at the start and when using "Download BiBTeX from DOI" function.',
+    "<i>Your data is not stored anywhere.</i>",
+    '<i>* App requires internet to check licence information at the start and when using "Download BiBTeX from DOI" function.</i>',
 ]
 for (i = 0; i < list.length; i++) {
-    InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`));
+    // InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`, 'p2'));
+    InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
+    typeAnimate(`instulli${i}`, `${list[i]}`)
 }
 //screenshot
 main.append(gen("div", "screenshots", gen("h2", "", "Screenshots"), "section"))
@@ -81,9 +83,12 @@ for (i = 0; i < screenshotURL.length; i++) {
 //download
 main.append(gen("div", "download", "", "section"));
 download.append(gen("h2", "", "Download and Run"));
-download.append(gen("a", "dlbtn", "Download", "button"));
+download.append(gen("a", "dlbtn", "Download (Windows)", "button"));
 dlbtn.href = releaseUrl;
 dlbtn.download = "FormHelper.mgeek.in.zip"
+download.append(gen("a", "dlbtn", "Download (Linux) comming soon", "button"));
+// dlbtn.href = releaseUrl;
+// dlbtn.download = "FormHelper.mgeek.in.zip"
 download.append(gen("a", "demoForm", "Demo form", "button"))
 demoForm.href = "demoform/"
 // demoForm.style.marginLeft = "20px";

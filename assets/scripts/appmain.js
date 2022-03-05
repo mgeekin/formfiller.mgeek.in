@@ -5,7 +5,7 @@ ListOfStyles = [
 ]
 
 function LoadStyles(srcList) {
-    for (i = 0; i < srcList.length; i++) {
+    for (i = 0; i <= srcList.length; i++) {
         var s = document.createElement("link");  // create a script DOM node
         s.rel = 'stylesheet';
         // s.type = 'text/javascript';
@@ -33,6 +33,9 @@ const tr = 'tr';
 const td = 'td';
 const button = 'button';
 const a = 'a';
+const input = 'input';
+const textarea = 'textarea';
+const svg = 'svg';
 
 
 function gen(elementtype, idin, htmlin, classin) {
@@ -133,3 +136,5 @@ async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
     // console.log(state);
     return state;
 }
+
+
