@@ -60,7 +60,7 @@ function addChatMessages(chat, Mi, i, j) {
         document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
         if (j != Mi.length) {
 
-            document.getElementById(`message${i}`).append(gen(span, 'cursor', '|', 'cursor'));
+            document.getElementById(`message${i}`).append(gen(span, 'cursor', '', 'cursor'));
         }
         // cursor.remove();
         j = j + 1;
@@ -76,11 +76,11 @@ function addChatMessages(chat, Mi, i, j) {
 }
 
 
-
-
-
-
 setTimeout(addChatBubble, 500, 0);
+
+
+
+
 
 
 

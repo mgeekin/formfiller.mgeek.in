@@ -88,30 +88,7 @@ p {
     padding-top: 20px;
 }
 
-.section {
-    margin-top: 5em;
-    padding: 10em;
-    margin-bottom: 5em;
 
-    // &::after {
-    //     position: absolute;
-    //     content: "";
-    //     margin: 0;
-    //     margin-top: 15%;
-    //     padding-top: 15%;
-    //     width: 100%;
-    //     left: 0;
-    //     background-color: aqua;
-    //     clip-path: polygon(0 30%, 0 50%, 100% 100%);
-    // }
-}
-
-
-// .section:nth-child(even) {
-//     border-radius: 10px;
-//     background: hsla(66, 100%, 1%, .1);
-//     box-shadow: 1px 1px 10px hsla(180, 100%, 50%, 0.534);
-// }
 
 
 
@@ -119,7 +96,7 @@ p {
 table {
     border-radius: 5px;
     box-shadow: 1px 1px 3px #999;
-    margin: 20px;
+    padding: 20px;
     width: 100%;
 
     thead {
@@ -187,20 +164,22 @@ video {
         position: relative;
         background: $colorBG;
         display: flex;
+        align-items: center;
         flex-direction: column;
 
     }
 
 }
 
-// .maincontainer {
-//     padding-left: 10%;
-//     padding-right: 10%;
-// }
+.maincontainer {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0;
+}
 
-// @media screen and (max-width: 600px) {
-//     .maincontainer {
-//         padding-left: 5px;
-//         padding-right: 5px;
-//     }
-// }
+.section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}

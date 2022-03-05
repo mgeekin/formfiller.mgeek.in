@@ -111,14 +111,15 @@ LoadScripts(ListOfScripts);
 //To aimate typing
 // var resp = typeAnimate(element, testStr);
 // var resp = typeAnimate(element, testStr,delay);
-async function typeAnimate(elem, textstr, delay = 50, start = 0) {
-    var cursor = gen(span, 'cursor', '<b>|</b>', 'cursor');
+async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
+    var elem = document.getElementById(elemid);
+    var cursor = gen(span, 'cursor', '', 'cursor');
     if (start < textstr.length) {
         var state = 'typing';
         start = start + 1;
         elem.innerHTML = textstr.slice(0, start);
         elem.appendChild(cursor);
-        setTimeout(typeAnimate, delay, elem, textstr, delay, start);
+        setTimeout(typeAnimate, delay, elemid, textstr, delay, start);
         if (start !== textstr.length) {
             // console.log(start);
             // console.log(textstr[start]);

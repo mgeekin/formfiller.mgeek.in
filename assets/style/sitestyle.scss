@@ -44,3 +44,39 @@
     width: 70%;
     height: 70%;
 }
+
+
+
+.cursor {
+    margin-left: .1em;
+
+    &:after {
+        width: .1em;
+        height: 1.6em;
+        display: inline;
+        background-color: #fff;
+        padding: .08em;
+        text-shadow: none;
+        font-weight: 100;
+        content: '';
+        transform: translateY(-.3em);
+        animation: cusrorblink 500ms infinite;
+    }
+}
+
+
+
+@keyframes cusrorblink {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+
+    }
+}
