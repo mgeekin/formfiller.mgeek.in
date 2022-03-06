@@ -1,0 +1,37 @@
+#footer {
+    display: flex;
+    background: hsl(236, 38%, 15%);
+    width: 100%;
+    z-index: 2;
+    flex-direction: column;
+    margin-top: 30%;
+
+
+
+    a {
+        color: $footcolor;
+    }
+}
+
+#copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    background: hsl(236, 38%, 15%);
+    font-size: .8rem;
+    font-weight: 200;
+
+    p {
+        padding-left: 10px;
+        margin-left: 20px;
+        padding-right: 10px;
+        margin-right: 20px;
+    }
+
+    a {
+        color: $footcolor;
+    }
+}

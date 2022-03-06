@@ -1,0 +1,28 @@
+/* Fonts and Variables */
+@import url("https://fonts.googleapis.com/css?family=Inter|Exo|Play|Roboto+Mono|Unica+One");
+$colorBG:linear-gradient(-30deg, hsl(237, 79%, 9%) 70%, hsl(207, 78%, 34%) 200%) no-repeat scroll 0 !default;
+$color:#EEF !default;
+$fontFamily: "Exo",
+'Verdana' !default;
+$fontHeading:'Inter',
+"Play",
+'Verdana';
+$colorButton:linear-gradient(0deg, hsl(182, 100%, 52%) 10%, hsl(182, 100%, 73%) 80%, hsl(182, 100%, 52%) 100%) no-repeat scroll 0 !default;
+$colorButtonText:hsl(197, 80%, 22%);
+$linkcolor:#ddd;
+$colorBody:hsl(237, 79%, 9%);
+$footcolor:hsl(197, 61%, 63%);
+$siteTitleValue:'FormHelper';
+
+// $color: rgb(125, 118, 0);
+// $color: linear-gradient(343deg, rgba(125, 118, 0, 1) 0%, rgba(255, 229, 0, 1) 31%, rgba(161, 151, 0, 1) 51%, rgba(255, 219, 0, 1) 71%);
+.gold {
+    /* Set the background color */
+    background: rgb(145, 140, 0);
+    background: linear-gradient(130deg, rgb(138, 131, 0) 0%, rgb(189, 170, 0) 31%, rgba(161, 151, 0, 1) 51%, rgba(255, 219, 0, 1) 71%, rgb(75, 65, 1) 100%);
+    /* Mask the color to the text, and remove the rest  */
+    -webkit-background-clip: text;
+    /* Make the text fill color value transparent so the masked background color comes through */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 0px rgba(226, 219, 0, .2);
+}

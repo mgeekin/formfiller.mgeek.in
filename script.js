@@ -62,6 +62,7 @@ YTButton.addEventListener('click', () => {
 
 
 
+
 //screenshot
 main.append(gen("div", "screenshots", gen("h2", "", "Screenshots"), "section"))
 //GIF
@@ -112,8 +113,6 @@ download.append(gen("p", "", "zip file contains Demo files you can edit with you
 main.append(gen("div", "howblock", gen(h2, '', "How to use")))
 howblock.append(gen("div", "howToUse"));
 howToUse.append(gen("div", "instructions", gen("h3", "", "Steps")))
-// howToUse.style.display = 'flex';
-// howToUse.style.flex-direction
 instructions.append(gen("ol", "InstList"));
 list = [
     "Open your form where data needs to be filled.",
@@ -125,15 +124,9 @@ list = [
 ]
 
 
-// for (i = 0; i < list.length; i++) {
-//     // InstList.append(gen("li", ``, `${i + 1}. ${list[i]}`, 'p2'));
-//     InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
-//     typeAnimate(`instulli${i}`, `${list[i]}`)
-// }
-
-i = 0
 function* typ() {
     while (true) {
+        i = InstList.childNodes.length;
         InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
         typeAnimate(`instulli${i}`, `${list[i]}`)
         // i = i + 1
@@ -141,9 +134,18 @@ function* typ() {
     }
 }
 let A = typ()
-for (i = 0; i < list.length; i++) {
-    A.next();
-}
+i = 0
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    if (scroll > howblock.scrollHeight) {
+        if (InstList.childNodes.length < list.length) {
+            A.next();
+        }
+    }
+});
+
+
+
 
 
 
