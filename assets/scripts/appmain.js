@@ -139,3 +139,5 @@ async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
 }
 
 
+window.scrollTo({ top: 0, behavior: 'smooth' })
+

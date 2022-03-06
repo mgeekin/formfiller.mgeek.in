@@ -34,4 +34,11 @@
   z-index: 2;
   position: absolute;
 }
+
+#hero p {
+  padding: 1em;
+  font-size: large;
+  line-height: 1.8em;
+  font-weight: 500;
+}
 /*# sourceMappingURL=pagestyle.css.map */

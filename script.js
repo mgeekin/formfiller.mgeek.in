@@ -35,12 +35,19 @@ for (i = 0; i < og.length; i++) {
     document.getElementById(`${metaid}`).content = `${og[i][1]}`;
 }
 main.append(gen("div", "hero", gen("h1", "", "Speed up data entry and form filling process"), "section"))
-hero.append(gen(p, '', 'One click to type one entry.<br /> Reuse your data stored in spreadsheet.<br/> Save your time and be productive.'))
+hero.append(gen(p, '', 'One click to type one entry.<br />\
+ Reuse data stored in spreadsheet.<br/> \
+ Save time and improves productive.'))
 hero.append(gen(span, 'getButton', 'Get form helper', 'button'))
 getButton.addEventListener('click', () => { download.scrollIntoView({ block: 'center', behavior: 'smooth' }) })
 
 hero.append(gen(span, 'YTButton', 'How To Use', 'button-blank'))
-YTButton.addEventListener('click', () => { howToUse.scrollIntoView({ block: 'center', behavior: 'smooth' }) })
+YTButton.addEventListener('click', () => {
+    var offset = -80;
+    var elemTop = howblock.getBoundingClientRect().top;
+    var pos = elemTop + offset;
+    window.scrollTo({ top: pos, behavior: 'smooth' })
+})
 
 
 

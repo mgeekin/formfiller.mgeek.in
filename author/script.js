@@ -97,7 +97,14 @@ function addChatMessages(chat, Mi, i, j) {
         setTimeout(addChatMessages, 10, chat, Mi, i, j);
         if (j == Mi.length) {
             // document.getElementById(`chat`).scrollIntoView(false);
-            sendbutton.scrollIntoView(false);
+            // sendbutton.scrollIntoView(false);
+            // () => {
+            var offset = chat.parentElement.getBoundingClientRect().height;
+            var elemTop = sendbutton.getBoundingClientRect().height;
+            var pos = offset - 900;
+            console.log(pos);
+            window.scrollTo({ top: pos, behavior: 'smooth' })
+            // }
             // cursor.remove();
             cursor.style.display = 'none';
             i = i + 1;
