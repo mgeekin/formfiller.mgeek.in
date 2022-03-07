@@ -168,7 +168,7 @@ async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
 
 window.onload = () => {
     main.append(gen(div, 'logBlock'))
-    // log()
+    log()
 
 };
 
