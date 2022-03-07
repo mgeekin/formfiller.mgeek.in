@@ -36,6 +36,8 @@ const a = 'a';
 const input = 'input';
 const textarea = 'textarea';
 const svg = 'svg';
+const canvas = 'canvas';
+const video = 'video';
 
 
 function gen(elementtype, idin, htmlin, classin) {
@@ -69,6 +71,27 @@ function gen(elementtype, idin, htmlin, classin) {
     return element;
 };
 
+
+
+function log(data = null) {
+    if (data === 'clear' || data === 'hide' || data === null) {
+        logBlock.innerHTML = "";
+        logBlock.style.display = 'none';
+    } else {
+        logBlock.style.display = 'flex';
+        var i = logBlock.childNodes.length;
+        logBlock.append(gen(p, `logp${i}`));
+        var logp = document.getElementById(`logp${i}`);
+        logp.scrollIntoView('false')
+        logp.append(gen(span, '', `${i + 1}. (${typeof (data)})`))
+        logp.append(gen(span, '', data))
+        // logp.append(gen(span, '', ``))
+        //   ${data} ${typeof (data)}`
+
+    }
+
+    // app.append(gen(div, 'logBlock', gen(p, '', 'ap', 'log')))
+}
 function loadApp() {
 
     const appmain = document.getElementById('app');
@@ -79,8 +102,12 @@ function loadApp() {
     appmain.innerHTML = "";
     header.innerHTML = "";
     main.innerHTML = "";
+
     footer.innerHTML = "";
-    appmain.append(header, main, footer);
+    appmain.append(header, main, footer, gen(div, 'logBlock'));
+    // main.append()
+    // logBlock.style.display = 'none';
+    // log()
     // loadHeader();
     // loadFooter();
 }
@@ -88,6 +115,7 @@ loadApp()
 ListOfScripts = [
     `/assets/scripts/header.js`,
     `/assets/scripts/footer.js`,
+    // `/assets/scripts/space.js`,
     `./script.js`,
     `https://unpkg.com/htmx.org@1.7.0`,
     // `https://cdn.tailwindcss.com`,
@@ -140,31 +168,11 @@ async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
 
 window.onload = () => {
     main.append(gen(div, 'logBlock'))
-    log()
+    // log()
 
 };
 
 
-
-function log(data = null) {
-    if (data === 'clear' || data === 'hide' || data === null) {
-        logBlock.innerHTML = "";
-        logBlock.style.display = 'none';
-    } else {
-        logBlock.style.display = 'flex';
-        var i = logBlock.childNodes.length;
-        logBlock.append(gen(p, `logp${i}`));
-        var logp = document.getElementById(`logp${i}`);
-        logp.scrollIntoView('false')
-        logp.append(gen(span, '', `${i + 1}. (${typeof (data)})`))
-        logp.append(gen(span, '', data))
-        // logp.append(gen(span, '', ``))
-        //   ${data} ${typeof (data)}`
-
-    }
-
-    // app.append(gen(div, 'logBlock', gen(p, '', 'ap', 'log')))
-}
 
 window.scrollTo({ top: 0, behavior: 'smooth' })
 

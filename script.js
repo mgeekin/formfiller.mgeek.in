@@ -178,3 +178,4 @@ gitIssue.target = "_blank";
 
 
 
+LoadScripts([`/assets/scripts/space.js`])
