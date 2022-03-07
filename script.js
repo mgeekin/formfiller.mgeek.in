@@ -37,7 +37,8 @@ for (i = 0; i < og.length; i++) {
 main.append(gen("div", "hero", gen("h1", "", "Speed up data entry and form filling process"), "section"))
 hero.append(gen(p, '', 'One click to type one entry.<br />\
  Reuse data stored in spreadsheet.<br/> \
- Save time and improves productive.'))
+ Save time and improves productive.<br/> \
+ Make error free typecast and coding tutorial.'))
 hero.append(gen(span, 'getButton', 'Get form helper', 'button'))
 getButton.addEventListener('click', () => { download.scrollIntoView({ block: 'center', behavior: 'smooth' }) })
 

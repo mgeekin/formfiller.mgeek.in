@@ -15,7 +15,8 @@ main.append(gen(canvas, 'bg'))
 bg.style.position = 'absolute'
 bg.style.top = 0
 bg.style.left = 0
-bg.style.zIndex = 3;
+bg.style.zIndex = 0;
+hero.style.zIndex = 2;
 var canvasOne = document.getElementById('bg');
 resizeCanvas()
 var draw = canvasOne.getContext('2d')
