@@ -52,7 +52,7 @@ class Particle {
         this.x = Math.random();
         this.y = Math.random();
         this.size = Math.random() * .1
-        this.maxSize = 5
+        this.maxSize = 20
         this.z = Math.random();
 
         this.speed = .0005;
@@ -89,7 +89,7 @@ class Particle {
 
         if (this.x < 0 || this.x > 1) this.reset()
         if (this.y < 0 || this.y > 1) this.reset()
-        // if (this.z > this.maxSize) this.reset()
+        if (this.z > this.maxSize) this.reset()
 
     }
 
