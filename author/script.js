@@ -1,12 +1,14 @@
 main.append(gen("div", "chatwindow", gen(div, 'chat'), 'section'));
 
-chatwindow.append(gen(div, 'mailform', gen(textarea, 'chatinput')));
+chatwindow.append(gen(img, 'dp'), gen(div, 'mailform', gen(textarea, 'chatinput')));
+dp.src = '/assets/img/author.png';
+dp.alt = ''
 chatinput.focus;
 chatinput.setActive;
 chatinput.select();
 // chatinput.type = 'textarea';
 chatinput.cols = 25;
-chatinput.rows = 7;
+chatinput.rows = 4;
 
 
 mailform.append(gen(button, 'sendbutton', 'send'))
@@ -83,7 +85,7 @@ function addChatMessages(chat, Mi, i, j) {
         // var cursor = gen(span, 'cursor', '|', 'cursor');
         document.getElementById(`p${i}`).append(gen("span", "user", ""));
         document.getElementById(`p${i}`).append(gen("span", `message${i}`));
-        // document.getElementById(`p${i}`).scrollIntoView(false);
+        document.getElementById(`p${i}`).scrollIntoView(false);
         // document.getElementById(`chat`).scrollIntoView(false);
     }
     if (j <= Mi.length) {
@@ -103,11 +105,14 @@ function addChatMessages(chat, Mi, i, j) {
             var elemTop = sendbutton.getBoundingClientRect().height;
             var pos = offset - 900;
             console.log(pos);
-            window.scrollTo({ top: pos, behavior: 'smooth' })
+            // window.scrollTo({ top: pos, behavior: 'smooth' })
             // }
             // cursor.remove();
             cursor.style.display = 'none';
+            document.getElementById(`p${i}`).scrollIntoView(false);
+
             i = i + 1;
+
             setTimeout(addChatBubble, 50, i);
         }
     }
