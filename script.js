@@ -101,7 +101,7 @@ dlbtn.download = "FormHelper.mgeek.in.zip"
 download.append(gen("a", "dlbtn", "Download (Linux) comming soon", "button"));
 // dlbtn.href = releaseUrl;
 // dlbtn.download = "FormHelper.mgeek.in.zip"
-download.append(gen("a", "demoForm", "Demo form", "button"))
+download.append(gen("a", "demoForm", "Demo form", "button-blank"))
 demoForm.href = "demoform/"
 // demoForm.style.marginLeft = "20px";
 download.append(gen("p", "", "zip file contains Demo files you can edit with your data"))

@@ -42,18 +42,24 @@ draw.stroke();
 
 // draw.line
 // draw.showfill()
+var center = {
+    'x': .4,
+    'y': .5
+}
 
 class Particle {
     constructor() {
         this.x = Math.random();
         this.y = Math.random();
-        this.size = .1
+        this.size = Math.random() * .1
         this.maxSize = 5
-        this.z = this.size;
-        this.speedX = .0002;
-        this.speedY = .0003;
-        this.speedZ = .004;
-        this.color = 'aqua'
+        this.z = Math.random();
+
+        this.speed = .0005;
+        this.speedX = this.speed * 3;
+        this.speedY = this.speed * 4;
+        this.speedZ = this.speed * 10;
+        this.color = 'hsla(180, 100%, 50%, 1)'
         // this.show()
 
 
@@ -65,31 +71,26 @@ class Particle {
     }
 
     update() {
-        // var speed_x = (Math.random()) * this.speedX;
-        // var speed_y = (Math.random()) * this.speedY;
         var speed_x = this.speedX;
         var speed_y = this.speedY;
-        // if (this.x < .8 && this.x > .2) {
-        if (this.x >= 0.5) {
-            this.x += speed_x * (1 + 2 * this.y)
-            if (this.x > 1) this.reset()
-        }
-        if (this.x < 0.5) {
-            this.x -= speed_x * (1 + 2 * this.y)
-            if (this.x < 0) this.reset()
-        }
-        if (this.y > 0.5) {
-            this.y += speed_y * (1 + 2 * this.x)
-            if (this.y > 1) this.reset()
-        }
-        if (this.y <= 0.5) {
-            this.y -= speed_y * (1 + 2 * this.x)
-            if (this.y < 0) this.reset()
-        }
-        this.z += this.speedZ
-        if (this.z > this.maxSize) {
-            this.reset()
-        }
+        var x = this.x - center.x
+        var y = this.y - center.y
+        var theta = Math.atan(y, x)
+        var movex = Math.cos(theta) * (speed_x * Math.abs(x)) * this.z
+        var movey = Math.sin(theta) * (speed_y) * this.z
+        // this.y += movey
+
+        if (this.x >= center.x) this.x += movex
+        if (this.x < center.x) this.x -= movex
+        if (this.y > center.y) this.y += movey// log(theta)
+        if (this.y <= center.y) this.y += movey// log(theta)
+
+        this.z += this.speedZ * (this.x + this.y + this.z)
+
+        if (this.x < 0 || this.x > 1) this.reset()
+        if (this.y < 0 || this.y > 1) this.reset()
+        // if (this.z > this.maxSize) this.reset()
+
     }
 
 
@@ -99,12 +100,12 @@ class Particle {
         this.update()
         draw.beginPath();
         draw.fillStyle = 'aqua'
-        draw.arc(this.x * canvasOne.width, this.y * canvasOne.height, this.z, 0, Math.PI * 2)
+        draw.arc((this.x) * canvasOne.width, (this.y) * canvasOne.height, this.z, 0, Math.PI * 2)
         draw.fill()
     }
 }
 var particleArray = []
-for (i = 0; i < 500; i++) {
+for (i = 0; i < 150; i++) {
     var cc = new Particle();
     // log(cc)
     particleArray[i] = cc
