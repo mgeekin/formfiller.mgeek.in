@@ -1,3 +1,5 @@
+$headerHeight:40px;
+
 #header {
     position: sticky;
     top: 0px;
@@ -5,7 +7,7 @@
     justify-content: space-between;
     background: hsl(233, 76%, 6%);
     box-shadow: 1px 2px 3px rgba(0, 255, 242, 0.8);
-    z-index: 2;
+    z-index: 3;
     padding: 2px;
     padding-left: 20px;
     padding-right: 20px;
@@ -87,14 +89,14 @@
     }
 }
 
-//small screen
+
 #navmenu {
     visibility: hidden;
 }
 
 
 #navmenu:checked+#navul {
-    display: none !important;
+    // display: none !important;
     flex-direction: column;
     top: 80px;
 }
@@ -179,7 +181,7 @@
 
 
 
-
+//small screen
 @media screen and (max-width: 600px) {
 
 
@@ -192,48 +194,62 @@
         cursor: pointer;
         padding: 10px;
         display: none;
-        position: absolute;
+        position: relative;
         top: 20px;
         right: 5px;
-
-        /*         &:checked {
-            .ham1 {
-                background: #F00;
-            }
-        } */
 
     }
 
     #navul {
         display: flex;
-        position: relative;
+        position: fixed;
         flex-direction: column;
         justify-items: center;
         align-content: center;
         width: 80vw;
         left: 0px;
-        top: 100px;
-        // height: 80vh;
+        // opacity: .1;
+        top: $headerHeight;
+        height: 80vh;
 
-        z-index: 2;
-        background-color: #222;
+        z-index: 1;
+        background-color: rgba(28, 34, 61, .99);
         margin: 0px;
+        padding: 0px;
+        transition: opacity 2s ease-in-out;
+        transition: opacity 2s ease-in-out;
 
         li {
             display: flex;
-            text-align: center;
+            // align-self: center;
+            // text-align: center;
             justify-content: center;
+            align-items: center;
+            margin: auto;
+            flex-grow: 1;
+            width: 100%;
 
             a {
 
-                flex-grow: 1;
-                padding: .5em;
+                // flex-grow: 1;
+                // padding: .5em;
+                // align-content: center;
+                // vertical-align: middle;
                 text-transform: uppercase;
                 font-size: 1.5rem;
             }
         }
     }
+
+    #navmenu:checked+#navul {
+        right: 200px;
+        opacity: 1;
+    }
 }
+
+
+
+
 
 
 
