@@ -74,18 +74,21 @@ function addChatBubble(i) {
     if (i < M.length) {
         chat.append(gen('p', `p${i}`, "", 'chatbubble'));
         setTimeout(addChatMessages, 1000, chat, M[i], i, 0);
+        chat.scrollTop = chat.scrollTopMax
     };
 }
 
 
 function addChatMessages(chat, Mi, i, j) {
+    chat.scrollTop = chat.scrollTopMax
     // console.log(j);
     // console.log(Mi.length);
     if (j == 0) {
         // var cursor = gen(span, 'cursor', '|', 'cursor');
         document.getElementById(`p${i}`).append(gen("span", "user", ""));
         document.getElementById(`p${i}`).append(gen("span", `message${i}`));
-        document.getElementById(`p${i}`).scrollIntoView(false);
+        // document.getElementById(`p${i}`).scrollIntoView(false);
+        chat.scrollTop = chat.scrollTopMax
         // document.getElementById(`chat`).scrollIntoView(false);
     }
     if (j <= Mi.length) {
@@ -109,8 +112,8 @@ function addChatMessages(chat, Mi, i, j) {
             // }
             // cursor.remove();
             cursor.style.display = 'none';
-            document.getElementById(`p${i}`).scrollIntoView(false);
-
+            // document.getElementById(`p${i}`).scrollIntoView(false);
+            chat.scrollTop = chat.scrollTopMax
             i = i + 1;
 
             setTimeout(addChatBubble, 50, i);

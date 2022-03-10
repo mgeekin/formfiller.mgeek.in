@@ -1,7 +1,7 @@
 function loadCopyright() {
     app.append(gen("div", "copyright", ""));
     copyright.append(gen("span", "copyurl", `&copy 2022 <a href="http://mgeek.in">mGeek.in</a>`));
-    copyright.append(gen("span", "copyauthor", `Designed by <a href="http://mgeek.in/author">Dr. Prateek Raj Gautam</a>`));
+    copyright.append(gen("span", "copyauthor", `Designed by <a href="http://mgeek.in/webmaster">Dr. Prateek Raj Gautam</a>`));
 };
 function loadFooter() {
 

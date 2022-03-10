@@ -58,6 +58,7 @@
           flex-direction: column;
   background: rgba(102, 255, 115, 0);
   padding: 2em;
+  padding-bottom: 4em;
   max-width: 750px;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -74,6 +75,21 @@
   -webkit-box-shadow: #d4d4ee 2px 2px 2px;
           box-shadow: #d4d4ee 2px 2px 2px;
   border-radius: .5em;
+  margin-bottom: 1em;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+}
+
+#chatwindow #chat .chatbubble:nth-last-child(1) {
+  -webkit-transform: translateY(0em);
+          transform: translateY(0em);
+  margin-bottom: 1em;
+}
+
+#chatwindow #chat .chatbubble:nth-last-child(2) {
+  margin-bottom: 1em;
 }
 
 #chatwindow #mailform {
@@ -93,6 +109,11 @@
   margin-top: 1em;
   margin-bottom: 5em;
   padding: 2em;
+  margin-right: auto;
+  max-width: 750px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
 }
 
@@ -114,8 +135,8 @@
   background: #0c99b367;
   color: white;
   border-radius: .5em;
-  height: 2em;
-  width: 6em;
+  height: 3em;
+  min-width: 6em;
 }
 
 #contact {
