@@ -179,4 +179,4 @@ gitIssue.target = "_blank";
 
 
 
-LoadScripts([`/assets/scripts/space.js`])
+LoadScripts([`/assets/scripts/spacegame.js`])
