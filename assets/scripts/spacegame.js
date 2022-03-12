@@ -8,11 +8,11 @@ function resizeCanvas() {
     canvasOne.height = window.innerHeight;
     canvasOne.style.background = "rgba(0, 40, 60, .1)"
 }
-main.append(gen(div, '', '', 'section'))
+// main.append(gen(div, '', '', 'section'))
 
-var heroSection = document.getElementsByClassName('section')[0];
+// var heroSection = document.getElementsByClassName('section')[0];
 
-heroSection.append(gen(canvas, 'bg'))
+main.append(gen(canvas, 'bg'))
 bg.style.position = 'absolute'
 bg.style.top = 0
 bg.style.left = 0
@@ -168,7 +168,7 @@ class Particle {
         this.update()
         draw.beginPath();
         // draw.fillStyle = 'aqua'
-        draw.fillStyle = this.colorw
+        draw.fillStyle = this.color
         if (this.z <= 0) this.reset()
         draw.arc((this.x) * canvasOne.width, (this.y) * canvasOne.height, this.z, 0, Math.PI * 2)
         draw.fill()

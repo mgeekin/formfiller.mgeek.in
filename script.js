@@ -178,5 +178,5 @@ gitIssue.target = "_blank";
 // feedback.append(gen("a", "demoForm", "Demo web form to test working with app", "button"))
 
 
-
+// LoadScripts([`/assets/scripts/space.js`])
 LoadScripts([`/assets/scripts/spacegame.js`])
