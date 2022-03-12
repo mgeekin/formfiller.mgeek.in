@@ -152,10 +152,10 @@ class Particle {
     }
 
     checkReset() {
-        if (this.z > this.maxSize) {
-            this.x += this.movex * .5
-            this.y += this.movey * .5
-        }
+        // if (this.z > this.maxSize) {
+        //     this.x += this.movex * .1
+        //     this.y += this.movey * .1
+        // }
         if (this.x < 0 || this.x > 1) this.reset()
         if (this.y < 0 || this.y > 1) this.reset()
 
