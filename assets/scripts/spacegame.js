@@ -13,6 +13,16 @@ function resizeCanvas() {
 // var heroSection = document.getElementsByClassName('section')[0];
 
 main.append(gen(canvas, 'bg'))
+bg.parentNode.append(gen(div, 'gameInst', ''))
+gameInst.append(gen(h3, '', 'And while you are here roam around by pressing'), gen(div, 'keylist'))
+keylist.append(gen(span, '', 'w', 'gamekey'), gen(span, '', 's', 'gamekey'), gen(span, '', 'a', 'gamekey'), gen(span, '', 'd', 'gamekey'))
+gameInst.style.position = 'absolute'
+gameInst.style.top = '80vh'
+gameInst.style.right = 0
+gameInst.style.zIndex = 1;
+// gameInst.style.opacity = .1
+
+
 bg.style.position = 'absolute'
 bg.style.top = 0
 bg.style.left = 0

@@ -113,3 +113,49 @@
 
 
 }
+
+
+
+
+#gameInst {
+    opacity: .05;
+    transition: all 500ms ease-out;
+    animation: gameblink 2s 5;
+    padding: 50px;
+
+    &:hover {
+        opacity: .5;
+        // animation: gameblink 2s 1;
+    }
+
+    #keylist {
+        display: flex;
+
+        .gamekey {
+            display: flex;
+            justify-content: left;
+            padding: 4wpx;
+            min-height: 40px;
+            min-width: 40px;
+            margin: 4px;
+            font-style: italic;
+            border-radius: 2px;
+            border: 1px solid #fff;
+
+        }
+    }
+
+
+}
+
+@keyframes gameblink {
+    from {
+        opacity: .01;
+    }
+
+
+    to {
+        opacity: .1;
+    }
+
+}

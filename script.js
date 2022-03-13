@@ -49,7 +49,9 @@ YTButton.addEventListener('click', () => {
     var pos = elemTop + offset;
     window.scrollTo({ top: pos, behavior: 'smooth' })
 })
-
+// hero.append(gen(div, 'gameInst', ''))
+// gameInst.append(gen(h3, '', 'And while you are here roam around by pressing'), gen(div, 'keylist'))
+// keylist.append(gen(span, '', 'w', 'gamekey'), gen(span, '', 's', 'gamekey'), gen(span, '', 'a', 'gamekey'), gen(span, '', 'd', 'gamekey'))
 
 
 
