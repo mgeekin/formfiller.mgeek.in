@@ -30,19 +30,64 @@
           flex-direction: column;
   position: relative;
   margin-bottom: 2em;
-  padding: 1em;
+  padding: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+          box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+  max-width: 800px;
+  max-height: 85vh;
 }
 
-#chatwindow #dp {
-  position: absolute;
-  left: -40px;
-  top: 50px;
-}
-
-#chatwindow #dp:after {
+#chatwindow #chatheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
   padding: 2px;
-  content: 'Prateek';
+  background-color: rgba(8, 10, 63, 0.99);
+  z-index: 2;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+  border-bottom: 1px solid rgba(212, 212, 238, 0.5);
+}
+
+#chatwindow #chatheader:after {
+  padding: 0px 4px;
+  margin: auto 0;
+  content: 'Dr. Prateek Raj Gautam';
   color: white;
+}
+
+#chatwindow #chatheader:hover {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+#chatwindow #chatheader:hover #dp {
+  width: 150px;
+  border-radius: 5px;
+}
+
+#chatwindow #chatheader #dp {
+  position: relative;
+  width: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  padding: 1px;
 }
 
 #chatwindow #chat {
@@ -106,8 +151,6 @@
       align-self: center;
   bottom: 0px;
   background: rgba(102, 255, 115, 0);
-  margin-top: 1em;
-  margin-bottom: 5em;
   padding: 2em;
   margin-right: auto;
   max-width: 750px;
@@ -128,6 +171,7 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: .5em;
+  margin-bottom: .5em;
 }
 
 #chatwindow #mailform #sendbutton {
@@ -137,6 +181,7 @@
   border-radius: .5em;
   height: 3em;
   min-width: 6em;
+  margin: 0;
 }
 
 #contact {

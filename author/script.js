@@ -1,6 +1,6 @@
-main.append(gen("div", "chatwindow", gen(div, 'chat'), 'section'));
-
-chatwindow.append(gen(img, 'dp'), gen(div, 'mailform', gen(textarea, 'chatinput')));
+main.append(gen("div", "chatwindow", "", 'section'));
+chatwindow.append(gen('div', 'chatheader', gen(img, 'dp')), gen(div, 'chat'))
+chatwindow.append(gen(div, 'mailform', gen(textarea, 'chatinput')));
 dp.src = '/assets/img/author.png';
 dp.alt = ''
 chatinput.focus;
@@ -92,12 +92,18 @@ function addChatMessages(chat, Mi, i, j) {
         // document.getElementById(`chat`).scrollIntoView(false);
     }
     if (j <= Mi.length) {
-        document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
-        if (j != Mi.length) {
-
-            document.getElementById(`message${i}`).append(gen(span, 'cursor', '', 'cursor'));
+        if (Mi[j] == ' ' || j == Mi.length) {
+            document.getElementById(`message${i}`).innerHTML = Mi.slice(0, j);
+            if (j != Mi.length) {
+                document.getElementById(`message${i}`).append(gen(span, 'cursor', '', 'cursor'));
+            }
         }
+
         // cursor.remove();
+
+
+
+
         j = j + 1;
         setTimeout(addChatMessages, 10, chat, Mi, i, j);
         if (j == Mi.length) {
