@@ -5,7 +5,8 @@ t1 = window.setTimeout(function () {
     //window.location.href = redirectUrl;
 }, 10000); */
 
-const releaseUrl = "/assets/release/Release.zip";
+const releaseUrlWIN = "/assets/release/Release.zip";
+const releaseUrlLINUX = "/assets/release/ReleaseLinux.zip";
 const GithubIssueUrl = "https://github.com/mgeekin/formfiller.mgeek.in/issues";
 const ytIdentifier = 'AU6rH9O8WfA'
 const youtubeCode = `<div class="ytContainer"><iframe class="ytVideo" src="https://www.youtube.com/embed/${ytIdentifier}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
@@ -97,12 +98,12 @@ for (i = 0; i < screenshotURL.length; i++) {
 //download
 main.append(gen("div", "download", "", "section"));
 download.append(gen("h2", "", "Download and Run"));
-download.append(gen("a", "dlbtn", "Download (Windows)", "button"));
-dlbtn.href = releaseUrl;
-dlbtn.download = "FormHelper.mgeek.in.zip"
-download.append(gen("a", "dlbtn", "Download (Linux) comming soon", "button"));
-// dlbtn.href = releaseUrl;
-// dlbtn.download = "FormHelper.mgeek.in.zip"
+download.append(gen("a", "dlbtnWIN", "Download (Windows)", "button"));
+dlbtnWIN.href = releaseUrlWIN;
+dlbtnWIN.download = "FormHelper.mgeek.in_WIN.zip"
+download.append(gen("a", "dlbtnLINUX", "Download (Linux)", "button"));
+dlbtnLINUX.href = releaseUrlLinux;
+dlbtnLINUX.download = "FormHelper.mgeek.in_LINUX.zip"
 download.append(gen("a", "demoForm", "Demo form", "button-blank"))
 demoForm.href = "demoform/"
 // demoForm.style.marginLeft = "20px";
