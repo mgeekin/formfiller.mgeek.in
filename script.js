@@ -102,7 +102,7 @@ download.append(gen("a", "dlbtnWIN", "Download (Windows)", "button"));
 dlbtnWIN.href = releaseUrlWIN;
 dlbtnWIN.download = "FormHelper.mgeek.in_WIN.zip"
 download.append(gen("a", "dlbtnLINUX", "Download (Linux)", "button"));
-dlbtnLINUX.href = releaseUrlLinux;
+dlbtnLINUX.href = releaseUrlLINUX;
 dlbtnLINUX.download = "FormHelper.mgeek.in_LINUX.zip"
 download.append(gen("a", "demoForm", "Demo form", "button-blank"))
 demoForm.href = "demoform/"
