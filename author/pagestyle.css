@@ -114,9 +114,10 @@
 }
 
 #chatwindow #chat .chatbubble {
+  font-size: small;
   margin-bottom: 2em;
   background: rgba(255, 255, 255, 0.178);
-  padding: 1em 2em;
+  padding: .5em 1em;
   -webkit-box-shadow: #d4d4ee 2px 2px 2px;
           box-shadow: #d4d4ee 2px 2px 2px;
   border-radius: .5em;
@@ -127,14 +128,12 @@
           transform: translateY(-2em);
 }
 
-#chatwindow #chat .chatbubble:nth-last-child(1) {
-  -webkit-transform: translateY(0em);
-          transform: translateY(0em);
-  margin-bottom: 1em;
+#chatwindow #chat .chatbubble:nth-child(1) {
+  margin-top: 5em;
 }
 
 #chatwindow #chat .chatbubble:nth-last-child(2) {
-  margin-bottom: 1em;
+  margin-bottom: 4em;
 }
 
 #chatwindow #mailform {

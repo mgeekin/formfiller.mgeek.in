@@ -110,25 +110,30 @@
 
 
         .chatbubble {
+            font-size: small;
             margin-bottom: 2em;
             // margin-top: 2em;
             // z-index: 3;
             background: hsla(0, 0%, 100%, 0.178);
-            padding: 1em 2em;
+            padding: .5em 1em;
             box-shadow: rgb(212, 212, 238) 2px 2px 2px;
             border-radius: .5em;
             margin-bottom: 1em;
             transition: all 500ms;
             transform: translateY(-2em);
 
+            &:nth-child(1) {
+                // transform: translateY(0em);
+                margin-top: 5em;
+            }
+
             &:nth-last-child(1) {
-                transform: translateY(0em);
-                margin-bottom: 1em;
+                // transform: translateY(2em);
+                // margin-bottom: 1em;
             }
 
             &:nth-last-child(2) {
-                // transform: translateY(0em);
-                margin-bottom: 1em;
+                margin-bottom: 4em;
             }
         }
     }

@@ -1,7 +1,7 @@
 main.append(gen("div", "chatwindow", "", 'section'));
 chatwindow.append(gen('div', 'chatheader', gen(img, 'dp')), gen(div, 'chat'))
 chatwindow.append(gen(div, 'mailform', gen(textarea, 'chatinput')));
-dp.src = '/assets/img/author.png';
+dp.src = '/assets/img/author.jpg';
 dp.alt = ''
 chatinput.focus;
 chatinput.setActive;
