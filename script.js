@@ -119,36 +119,60 @@ howblock.append(gen("div", "howToUse"));
 howToUse.append(gen("div", "instructions", gen("h3", "", "Steps")))
 instructions.append(gen("ol", "InstList"));
 list = [
-    "Open your form where data needs to be filled.",
-    "Press the align button to move form window and formhelper in side by side.",
-    "Load your data file (*.xlsx).",
+    "Open your form in your web browser.",
+    "Launch FormHelper application.",
+    "Browse and load your data file (*.xlsx).",
+    "Align form window and FormHelper app in split screen mode.",
     "Select the type area of form then click on button to fill it with data.",
-    "<i>Your data is not stored anywhere.</i>",
     '<i>* App requires internet to check licence information at the start and when using "Download BiBTeX from DOI" function.</i>',
 ]
 
 
-function* typ() {
-    while (true) {
-        i = InstList.childNodes.length;
-        InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
-        typeAnimate(`instulli${i}`, `${list[i]}`)
-        // i = i + 1
-        yield i
+// async function* typ() {
+//     while (true) {
+//         i = InstList.childNodes.length;
+//         InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
+//         var res = await typeAnimate(`instulli${i}`, `${list[i]}`)
+//         // console.log(res)
+//         yield i
+//     }
+// }
+
+
+
+async function typ() {
+    i = InstList.childNodes.length;
+    InstList.append(gen("li", `instulli${i}`, "", 'p1 m1'));
+    var res = await typeAnimate(`instulli${i}`, `${list[i]}`)
+    if (InstList.childNodes.length < list.length) {
+        await typ(res);
     }
 }
-let A = typ()
-i = 0
-window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-    if (scroll > howblock.scrollHeight) {
-        if (InstList.childNodes.length < list.length) {
-            A.next();
-        }
+
+
+
+
+window.addEventListener("scroll", startTyping)
+
+// let scroll = this.scrollY;
+// var diff = scroll - howblock.getBoundingClientRect().top - window.innerHeight
+// if (diff > window.innerHeight / 2) {
+//     log(diff)
+//     startTyping();
+//     window.removeEventListener("scroll", (event))
+// }
+// });
+
+async function startTyping() {
+
+    var diff = window.scrollY - howblock.getBoundingClientRect().top - window.innerHeight
+    if (diff > window.innerHeight / 2) {
+        window.removeEventListener("scroll", startTyping)
+        // if (InstList.childNodes.length < list.length) {
+        res = await typ()
+        // }
     }
-});
-
-
+}
 
 
 

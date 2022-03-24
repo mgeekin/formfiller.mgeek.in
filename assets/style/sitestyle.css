@@ -206,13 +206,14 @@ ol li {
 }
 
 ol li:before {
+  font-size: small;
   margin-right: 10px;
   content: counter(item);
-  background: #0047a3;
+  background: cyan;
   border-radius: 100%;
-  color: white;
-  padding: .2em;
-  margin: .3em;
+  color: #222222;
+  padding: .1em;
+  margin: .5wdem;
   width: 1.2em;
   text-align: center;
   display: inline-block;
@@ -604,6 +605,7 @@ svg {
   max-height: 80%;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: scroll;
+  resize: both;
 }
 
 #logBlock p {

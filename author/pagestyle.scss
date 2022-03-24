@@ -128,8 +128,8 @@
             }
 
             &:nth-last-child(1) {
-                // transform: translateY(2em);
-                // margin-bottom: 1em;
+                margin-top: -1em;
+                transition: margin-top .5s ease 2s
             }
 
             &:nth-last-child(2) {

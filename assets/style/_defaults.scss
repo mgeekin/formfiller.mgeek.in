@@ -219,13 +219,15 @@ ol {
         margin-bottom: 5px;
 
         &:before {
+            font-size: small;
             margin-right: 10px;
             content: counter(item);
-            background: rgb(0, 71, 163);
+            background: $accentColor;
             border-radius: 100%;
-            color: white;
-            padding: .2em;
-            margin: .3em;
+            color: #222222;
+            padding: .1em;
+            margin: .5wdem;
+
             width: 1.2em;
             text-align: center;
             display: inline-block;

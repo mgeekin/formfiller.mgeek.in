@@ -132,6 +132,12 @@
   margin-top: 5em;
 }
 
+#chatwindow #chat .chatbubble:nth-last-child(1) {
+  margin-top: -1em;
+  -webkit-transition: margin-top .5s ease 2s;
+  transition: margin-top .5s ease 2s;
+}
+
 #chatwindow #chat .chatbubble:nth-last-child(2) {
   margin-bottom: 4em;
 }

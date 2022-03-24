@@ -126,6 +126,10 @@ function LoadScripts(srcList) {
         var s = document.createElement("script");  // create a script DOM node
         s.type = 'text/javascript'
         s.src = srcList[i];  // set its src to the provided URL
+        // s.async = true
+        // s.defer = true
+        s.setAttribute('async', '');
+        s.setAttribute('defer', '');
 
         // script.crossorigin = "anonymous";
         // script.integrity = "sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo";
@@ -146,22 +150,20 @@ async function typeAnimate(elemid, textstr, delay = 50, start = 0) {
     var elem = document.getElementById(elemid);
     var cursor = gen(span, 'cursor', '', 'cursor');
     if (start < textstr.length) {
-        var state = 'typing';
         start = start + 1;
         elem.innerHTML = textstr.slice(0, start);
         elem.appendChild(cursor);
         setTimeout(typeAnimate, delay, elemid, textstr, delay, start);
-        if (start !== textstr.length) {
-            // console.log(start);
-            // console.log(textstr[start]);
+        if (start == textstr.length) {
+            state = 'typed';
+            cursor.remove();
+            cursor.style.display = 'none'
+            // console.log(state);
+            return state;
         }
     }
-    if (start == textstr.length) {
-        state = 'typed';
-        cursor.remove();
-        cursor.style.display = 'none'
-        return state;
-    }
+
+
     // console.log(state);
     // return state;
 }
