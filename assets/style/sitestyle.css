@@ -1,16 +1,5 @@
 /* Fonts and Variables */
-@import url("https://fonts.googleapis.com/css?family=Inter|Exo|Play|Roboto+Mono|Unica+One");
-.gold {
-  /* Set the background color */
-  background: #918c00;
-  background: linear-gradient(130deg, #8a8300 0%, #bdaa00 31%, #a19700 51%, #ffdb00 71%, #4b4101 100%);
-  /* Mask the color to the text, and remove the rest  */
-  -webkit-background-clip: text;
-  /* Make the text fill color value transparent so the masked background color comes through */
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 0px rgba(226, 219, 0, 0.2);
-}
-
+@import url("https://fonts.googleapis.com/css?family=Poppins|Exo|Play|Roboto+Mono|Unica+One");
 /* Reset style */
 * {
   margin: 0px;
@@ -26,13 +15,13 @@
 
 :root {
   font-size: 1rem;
-  font-family: "Exo", "Verdana";
+  font-family: "Poppins", "Exo", "Verdana";
   text-shadow: 0.01em 0.01em 0.1em #292929;
 }
 
 body {
   width: 100%;
-  background: #050729;
+  background: linear-gradient(-30deg, #290529 70%, #186eb4 200%) no-repeat scroll 0;
 }
 
 a {
@@ -46,8 +35,8 @@ button,
   display: inline-block;
   outline: 0.2em solid #05eeff;
   padding: .5em;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #0af7ff), color-stop(80%, #75faff), to(#0af7ff)) no-repeat scroll 0;
-  background: linear-gradient(0deg, #0af7ff 10%, #75faff 80%, #0af7ff 100%) no-repeat scroll 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(10, 247, 255, 0.8)), color-stop(80%, #75faff), to(#0af7ff)) no-repeat scroll 0;
+  background: linear-gradient(0deg, rgba(10, 247, 255, 0.8) 10%, #75faff 80%, #0af7ff 100%) no-repeat scroll 0;
   color: #0b4c65;
   text-align: center;
   text-shadow: none;
@@ -87,18 +76,18 @@ button:hover,
 }
 
 h1 {
-  font-family: "Inter", "Play", "Verdana";
+  font-family: "Poppins", "Inter", "Play", "Verdana";
   margin-bottom: 1em;
 }
 
 h2 {
-  font-family: "Inter", "Play", "Verdana";
+  font-family: "Poppins", "Inter", "Play", "Verdana";
   margin-bottom: 1em;
 }
 
 h3 {
   margin-bottom: 1em;
-  font-family: "Inter", "Play", "Verdana";
+  font-family: "Poppins", "Inter", "Play", "Verdana";
 }
 
 p {
@@ -169,7 +158,7 @@ video {
 
 #app #main {
   position: relative;
-  background: linear-gradient(-30deg, #050729 70%, #135d9a 200%) no-repeat scroll 0;
+  background: linear-gradient(-30deg, #290529 70%, #186eb4 200%) no-repeat scroll 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,7 +198,7 @@ ol li:before {
   font-size: small;
   margin-right: 10px;
   content: counter(item);
-  background: cyan;
+  background: rgba(0, 255, 255, 0.8);
   border-radius: 100%;
   color: #222222;
   padding: .1em;
