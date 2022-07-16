@@ -1,14 +1,22 @@
-function loadCopyright() {
-    app.append(gen("div", "copyright", ""));
-    copyright.append(gen("span", "copyurl", `&copy 2022 <a href="https://mgeek.in">mGeek.in</a>`));
-    copyright.append(gen("span", "copyauthor", `Designed by <a href="https://webmaster.mgeek.in/">Dr. Prateek Raj Gautam</a>`));
-};
 function loadFooter() {
-
-    footer.innerHTML = '';
-    footer.append(gen(div, 'footlinks', '', ' p-1'))
-    // footer.innerHTML = '';
-    loadCopyright();
+    var footerStyle = `.footer {
+    display: flex;
+    min-height: 3em;
+    background: hsl(236, 38%, 15%);
+    width: 100%;
+    z-index: 2;
+    flex-direction: column;
+    // padding-inline: clamp(1em, 10vw, 15%);
+    padding-top:5em;
+   a {
+        color: $footcolor;
+    }
+}
+`
+    loadscss(footerStyle, "footer")
+    append(footer, gen(div, "contact", gen(h1, "", "Contact", ''), 'container,section'), 'over')
+    append(contact, gen(p, "", social))
+    console.info('footer loaded')
 };
 
 

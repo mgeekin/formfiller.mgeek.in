@@ -17,19 +17,24 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://formhelper.mgeek.in" />
     <meta property="og:site_name" content="formhelper.mgeek.in" />
-    <meta property="og:description" content="It provides a way to fill forms in less time.    1. Open your form where data needs to be filled
+    <meta property="og:description" content="One click to type one entry.
+    Reuse data stored in spreadsheet.
+    Save time and improves productive.
+    Make error free typecast and coding tutorial.
+    It provides a way to fill forms in less time.    1. Open your form where data needs to be filled
     2. press the align button to move form window and formhelper in side by side
     3. Load your data file (*.xlsx) in form helper
     4. Select the type area of form then click click on button to fill it with data." />
 
     <meta name="fb:page_id" content="mGeek.in" />
-
-
-    <link rel="stylesheet" href="/assets/style/sitestyle.css">
-    <link rel="stylesheet" href="./pagestyle.css">
     <meta name="google-analytics" content="G-TWM5W0XHLF" />
-    <meta name="keywords" content="excel automation, automation tool, form filling,data entry" />
-    <meta name="description" content="It provides a way to fill forms in less time.    1. Open your form where data needs to be filled
+    <meta name="keywords"
+        content="excel automation, automation tool, form filling,data entry, One click to type one entry, Reuse data stored in spreadsheet,    Save time and improves productive,    Make error free typecast and coding tutorial." />
+    <meta name="description" content="One click to type one entry.
+    Reuse data stored in spreadsheet.
+    Save time and improves productive.
+    Make error free typecast and coding tutorial.
+    It provides a way to fill forms in less time.    1. Open your form where data needs to be filled
     2. press the align button to move form window and formhelper in side by side
     3. Load your data file (*.xlsx) in form helper
     4. Select the type area of form then click click on button to fill it with data." />
@@ -60,23 +65,28 @@
         gtag('js', new Date());
         gtag('config', 'G-TWM5W0XHLF');
     </script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/htmx.org@1.7.0"
-        integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo"></script> -->
-    <script src="/assets/scripts/appmain.js " async defer></script>
+
+
+    <!-- <script src="/assets/scripts/appmain.js " async defer></script> -->
 </head>
 
 <body>
     <app id="app">
     </app>
-    <!--<script type="text/javascript" src="/eel.js"></script>-->
-
-    <!-- <script src="/assets/scripts/header.js" async defer></script>
-    <script src="/assets/scripts/footer.js" async defer></script>-->
-    <!-- <script src="/script.js" async defer></script> -->
-
-
-
+    <script type="module" defer>
+        import "https://generatorjs.github.io/generatorjs.cdn/dist/latest/generator.modular.js"
+        import("/defaults.js")
+        var tags = "header,main,footer"
+        append(app, gen(header, "header", "", "header"))
+        append(app, gen(main, "main", "", "main,container"))
+        append(app, gen(footer, "footer", "", "footer"))
+        // append(main, gen(section, "hero", "", "hero, section"))
+        load(["/assets/style/sitestyle.css", "/assets/scripts/header.js", "/assets/scripts/footer.js", "./script.js"])
+        loaddefaults()
+        // loadCopyrights()
+        // updatePageNav()
+        // load('./assets/scripts/appmain.js')
+    </script>
 </body>
 
 </html>

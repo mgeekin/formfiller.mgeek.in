@@ -65,12 +65,26 @@
         gtag('js', new Date());
         gtag('config', 'G-TWM5W0XHLF');
     </script>
-    <script src="/assets/scripts/appmain.js " async defer></script>
+
+
+    <!-- <script src="/assets/scripts/appmain.js " async defer></script> -->
 </head>
 
 <body>
     <app id="app">
     </app>
+    <script type="module" defer>
+        import "https://generatorjs.github.io/generatorjs.cdn/dist/latest/generator.modular.js"
+        import("/defaults.js")
+        var tags = "header,main,footer"
+        append(app, gen(header, "header", "", "header"))
+        append(app, gen(main, "main", "", "main,container"))
+        append(app, gen(footer, "footer", "", "footer"))
+        // append(main, gen(section, "hero", "", "hero, section"))
+        load(["./assets/scripts/header.js", "./script.js", "./assets/scripts/footer.js"])
+        loaddefaults()
+        // load('./assets/scripts/appmain.js')
+    </script>
 </body>
 
 </html>

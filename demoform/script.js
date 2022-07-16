@@ -1,5 +1,43 @@
 
+var demoStyle = `
 
+
+#spacegame{
+    opacity:.4;
+}
+
+
+h1,h2,h3,h4{
+    margin-block:1em;
+}
+
+
+
+
+
+
+.tdl {
+    text-transform: capitalize;
+}
+
+thead {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+#resetAll {
+    margin-top: 40px;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 40px auto;
+    width: 400px;
+    margin-bottom: 20%;
+}
+
+.input{
+color:black}
+`
 
 
 var formfields = [
@@ -29,16 +67,16 @@ var formfields = [
         "data": ['Title', 'Journal', "Authors", "Year", "pages"]
     }
 ];
-main.append(gen("div", `sec`, "", 'section'));
-sec.append(gen("h1", ``, "Demo Form to test working of software", ''));
-sec.append(gen("p", ``, "The data is not saved.", ''));
+append(main, gen("div", `sec`, "", 'section'));
+append(sec, gen("h1", ``, "Demo Form to test working of software", ''));
+append(sec, gen("p", ``, "The data is not saved.", ''));
 
 for (var i = 0; i < formfields.length; i++) {
     var heading = formfields[i].heading;
     var datafield = formfields[i].data;
     console.log(datafield)
 
-    sec.append(gen("div", `div${heading}`));
+    append(sec, gen("div", `div${heading}`));
 
     // document.getElementById(`div${heading}`).append(gen("h3", `heading${i}`, `${heading}`));
     document.getElementById(`div${heading}`).append(gen("table", `table${i}`));
@@ -84,3 +122,5 @@ function addButton(text, target) {
     target.append(button);
 
 }
+
+loadscss(demoStyle)

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1232"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   sodipodi:docname="LOGO.SVG"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1234"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74653479"
+     inkscape:cx="20.762596"
+     inkscape:cy="397.16836"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2109"
+     showguides="false" />
+  <defs
+     id="defs1229">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1437">
+      <stop
+         style="stop-color:#f429bf;stop-opacity:1;"
+         offset="0"
+         id="stop1433" />
+      <stop
+         style="stop-color:#f1dde9;stop-opacity:1;"
+         offset="1"
+         id="stop1435" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1365">
+      <stop
+         style="stop-color:#b3b3fc;stop-opacity:1;"
+         offset="0"
+         id="stop1361" />
+      <stop
+         style="stop-color:#3e3ec7;stop-opacity:0.95783126;"
+         offset="1"
+         id="stop1363" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1365"
+       id="linearGradient1367"
+       x1="49.409546"
+       y1="98.761253"
+       x2="50.430149"
+       y2="100.36475"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1437"
+       id="linearGradient1439"
+       x1="50.927689"
+       y1="98.675072"
+       x2="51.951622"
+       y2="100.61156"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1437"
+       id="linearGradient1944"
+       gradientUnits="userSpaceOnUse"
+       x1="50.927689"
+       y1="98.675072"
+       x2="52.857975"
+       y2="100.58128" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2109">
+      <g
+         id="g2117"
+         transform="matrix(0.81781777,0,0,0.81781777,176.09302,0.11251874)"
+         inkscape:export-filename="logo.png"
+         inkscape:export-xdpi="87.017975"
+         inkscape:export-ydpi="87.017975">
+        <g
+           id="g1967"
+           inkscape:export-filename="logo.png"
+           inkscape:export-xdpi="87.017975"
+           inkscape:export-ydpi="87.017975"
+           transform="translate(-200.17165)">
+          <g
+             aria-label="H"
+             id="text1073"
+             style="font-style:oblique;font-size:3.175px;line-height:1.2;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Oblique';font-variant-ligatures:none;letter-spacing:0.529167px;word-spacing:0px;fill:#00ffff;stroke-width:0.264583"
+             transform="matrix(71.368701,0,0,71.368701,-3474.4833,-6965.8188)">
+            <path
+               d="m 49.708375,99.439558 h 0.857312 l 0.182935,-0.80822 h 0.314709 l -0.515693,2.309592 h -0.313159 l 0.280048,-1.237823 h -0.860412 z"
+               id="path1075"
+               sodipodi:nodetypes="ccccccccc"
+               style="fill:url(#linearGradient1367);fill-opacity:1" />
+          </g>
+          <g
+             aria-label="F"
+             id="text1069"
+             style="font-size:3.175px;line-height:1.2;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';font-variant-ligatures:none;letter-spacing:0.529167px;word-spacing:0px;fill:url(#linearGradient1439);fill-opacity:1;stroke-width:0.264583"
+             transform="matrix(71.368701,0,0,71.368701,-3602.5647,-6962.3094)">
+            <path
+               d="m 50.862084,98.57648 h 1.362708 v 0.26355 h -1.047998 v 0.682129 h 0.950329 v 0.26355 h -0.950329 v 1.105361 h -0.31471 z"
+               id="path1174"
+               style="fill:url(#linearGradient1944);fill-opacity:1" />
+          </g>
+        </g>
+        <rect
+           style="opacity:0.5;fill:none;stroke:none;stroke-width:0.250948;paint-order:markers stroke fill"
+           id="rect2101"
+           width="165.64407"
+           height="165.64407"
+           x="-184.37546"
+           y="72.763054" />
+      </g>
+    </g>
+  </g>
+</svg>

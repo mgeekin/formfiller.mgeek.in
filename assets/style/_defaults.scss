@@ -1,29 +1,65 @@
+:root {
+
+    --fontScale: 1;
+    --fontSize: calc(var(--fontScale, 1) * 1rem);
+    --textColor: white;
+    --colorScheme: normal;
+    --fontFamily: "open sans";
+    --lightFactor: 1;
+    --hue: 300;
+    --sat: 78%;
+    --light: 9%;
+    --hueAscent: 160;
+    --satAscent: 70%;
+    --lightAscent: 60%;
+    --textColor: white;
+
+
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins|Exo|Play|Roboto+Mono|Unica+One");
+
+
+
+
 /* Reset style */
 * {
+
     margin: 0px;
     padding: 0px;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    transition: all 100ms ease-in-out;
-    color: $color;
+    transition: all 250ms ease-in-out;
+    scroll-behavior: smooth;
+    color-scheme: var(--colorScheme, normal);
+    // color: var(--textColor, white);
 }
 
-:root {
-    font-size: 1rem;
-    font-family: $fontFamily;
-    text-shadow: .01em .01em .1em hsl(0, 0%, 16%);
-}
 
 body {
+    --h: var(--hue, 300);
+    --s: var(--sat, 78%);
+    --l: calc(var(--light, 9%) * var(--lightFactor, 1));
     width: 100%;
-    background: $colorBody;
-
+    background: linear-gradient(-30deg, hsl(var(--h), var(--s), var(--l)) 70%, hsl(207, 76%, 40%) 200%) no-repeat scroll;
+    color: var(--textColor, white);
 }
 
 
 a {
-    color: $linkcolor;
+    // padding-inline: 5px;
+    --ha: var(--hueAscent, 200);
+    --sa: var(--satAscent, 100%);
+    --la: var(--lightAscent, 50%);
+    color: hsl(var(--ha), var(--sa), var(--la));
+
+    &:hover {
+        color: white;
+        // background: hsl(var(--ha), var(--sa), var(--la));
+        // padding: 5px;
+    }
 }
 
 button,
@@ -74,13 +110,11 @@ button,
 }
 
 h1 {
-    font-family: $fontHeading;
     margin-bottom: 1em;
 
 }
 
 h2 {
-    font-family: $fontHeading;
     margin-bottom: 1em;
 
     // &::after {
@@ -178,7 +212,7 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: $color;
+    // color: $color;
     // max-width: 100%;
     // padding-left: 00%;
     // padding-right: 00%;
@@ -186,7 +220,7 @@ video {
     #main {
 
         position: relative;
-        background: $colorBG;
+        // background: $colorBG;
         display: flex;
         align-items: left;
         flex-direction: column;
@@ -195,17 +229,16 @@ video {
 
 }
 
-.maincontainer {
+.maincontainer,
+.container {
     padding-left: 10%;
     padding-right: 10%;
     margin: 0;
 }
 
+section,
 .section {
-    margin-top: 5em;
-    margin-bottom: 5em;
-    padding-top: 10em;
-    padding-bottom: 10em;
+    padding-block: 10em;
 }
 
 
