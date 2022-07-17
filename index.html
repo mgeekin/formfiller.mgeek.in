@@ -66,6 +66,18 @@
         gtag('config', 'G-TWM5W0XHLF');
     </script>
 
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            transition: all 250ms ease-in-out;
+            scroll-behavior: smooth;
+            color-scheme: var(--colorScheme, normal);
+        }
+    </style>
 
     <!-- <script src="/assets/scripts/appmain.js " async defer></script> -->
 </head>
@@ -74,13 +86,11 @@
     <app id="app">
     </app>
     <script type="module" defer>
+        window.DEBUT = 1
         import "https://generatorjs.github.io/generatorjs.cdn/dist/latest/generator.modular.js"
-        import("/defaults.js")
+        load("/defaults.js")
         var tags = "header,main,footer"
-        append(app, gen(header, "header", "", "header"))
-        append(app, gen(main, "main", "", "main,container"))
-        append(app, gen(footer, "footer", "", "footer"))
-        // append(main, gen(section, "hero", "", "hero, section"))
+        tags.split(",").forEach(t => { append(app, gen(t, t, "", t)) })
         load(["./assets/scripts/header.js", "./script.js", "./assets/scripts/footer.js"])
         loaddefaults()
         // load('./assets/scripts/appmain.js')

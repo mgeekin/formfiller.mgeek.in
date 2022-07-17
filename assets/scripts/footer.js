@@ -7,7 +7,7 @@ function loadFooter() {
     z-index: 2;
     flex-direction: column;
     // padding-inline: clamp(1em, 10vw, 15%);
-    padding-top:5em;
+    // padding-top:5em;
    a {
         color: $footcolor;
     }

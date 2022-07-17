@@ -98,7 +98,7 @@ var headerStyle = `
     #logo{
     margin-block:auto;
         img {
-            --logoWidth:55px;
+            --logoWidth:40px;
             max-width:var(--logoWidth);
             transition: all 300ms ease-in;
             object-fit:contain;

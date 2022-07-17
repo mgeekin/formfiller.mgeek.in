@@ -35,7 +35,7 @@ for (i = 0; i < og.length; i++) {
     document.getElementById(`${metaid}`).property = `og:${og[i][0]}`;
     document.getElementById(`${metaid}`).content = `${og[i][1]}`;
 }
-append(main, gen("section", "hero", gen(h1, "", "Speed up data entry and form filling process"), "section"), "over")
+append(main, gen("section", "hero", gen(h1, "", "Speed up data entry and form filling process"), "section,container,container"), "over")
 append(hero, gen(p, '', 'One click to type one entry.<br />\
  Reuse data stored in spreadsheet.<br/> \
  Save time and improves productive.<br/> \
@@ -68,7 +68,7 @@ YTButton.addEventListener('click', () => {
 
 
 //screenshot
-append(main, gen("section", "screenshots", gen("h1", "", "Screenshots"), "section"))
+append(main, gen("section", "screenshots", gen("h1", "", "Screenshots"), "section,container"))
 //GIF
 
 
@@ -96,7 +96,7 @@ for (i = 0; i < screenshotURL.length; i++) {
 //addButton("TEMP", main);
 
 //download
-append(main, gen("section", "download", "", "section"));
+append(main, gen("section", "download", "", "section,container"));
 append(download, gen("h1", "", "Download and Run"));
 append(download, gen("a", "dlbtnWIN", "Download (Windows)", "button"));
 dlbtnWIN.href = releaseUrlWIN;
@@ -114,7 +114,7 @@ append(download, gen("p", "", "zip file contains Demo files you can edit with yo
 //How to Use
 //instructions
 
-append(main, gen("section", "howblock", gen(h1, '', "How to use")))
+append(main, gen("section", "howblock", gen(h1, '', "How to use"), "section,container"))
 append(howblock, gen("div", "howToUse"));
 append(howToUse, gen("div", "instructions", gen("h3", "", "Steps")))
 append(instructions, gen("ol", "InstList"));
@@ -160,13 +160,13 @@ async function startTyping() {
 
 
 //youtube
-append(howToUse, gen("section", "yt", gen("h1", "", "Video Tutorial on YouTube")))
+append(howToUse, gen("section", "yt", gen("h1", "", "Video Tutorial on YouTube"), "section,container"))
 append(yt, gen("ytcode", "ytcode", youtubeCode));
 
 
 
 //feedback
-append(main, gen("section", "feedback", "", "section "));
+append(main, gen("section", "feedback", "", "section,container "));
 append(feedback, gen("h2", "", "Feedback and Report Issue"));
 append(feedback, gen("p", '', "Plese send Feedback on Youtube and Issue on Github"));
 append(feedback, gen("a", "ytComment", "Feedback", "button"));
